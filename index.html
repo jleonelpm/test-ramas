@@ -1,0 +1,1636 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<title>El Chilehabanero Restaurante: Restaurante, Caf� y Bar. Autentica 
+comida Yucateca y Mediterranea con el toque gourmet de nuestro Chef. 
+Ensaladas, Sandwiches y Pizzas.</title>
+<meta name="keywords" content="restaurante de comida regional merida, comida yucateca merida yucatan, comida tradicional en merida yucatan, traditional yucatecan food, regional food in merida yucatan, mexican food in merida yucatan, restaurante en merida">
+<meta name="description" content="Restaurante, Caf� y Bar. Autentica comida Yucateca y Mediterranea. Ensaladas, Sandwiches y Pizzas Merida, Yucatan, buffetes de comida, bufet de comida, comida autentica, buen sabor, comida especial, desayunos ligeros, cafeteria restaurante, restaurante cafeter�a,merida cefeter�a, cafeter�a yucat�n, cafeter�a merida, cafe merida, cafe yucat�n, pizzas mexicanas abuen precio, pizzas de buen sabor, ensaladas mexicanas">
+<meta http-equiv="Content-language" content="es">
+<meta name="robots" content="index,follow">
+<meta name="revisit-after" content="15 days">
+<meta http-equiv="distribution" content="Global">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="icon" href="http://www.elchilehabanerorestaurante.com/images/ico.png" type="image/x-icon">
+<link rel="icon" href="http://www.elchilehabanerorestaurante.com/images/ico.png" type="image/x-icon">  
+<link rel="shortcut icon" href="http://www.elchilehabanerorestaurante.com/images/ico.png" type="image/x-icon">
+<link href="archivos/estilos.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="archivos/jquery.js"></script>
+<script type="text/javascript" src="archivos/action_mycarrusel.js"></script>
+<script type="text/javascript" src="archivos/s3Slider.js"></script>
+<script type="text/javascript">
+function rumSplash(){
+	$('#telon').slideDown();
+	$('#clikcme').slideDown('normal'); $('#clikcme2').slideDown('normal');
+	$('#clikcme').slideUp('normal'); $('#clikcme2').slideUp('normal')
+}
+///cuando cargue el document hago...
+jQuery(document).ready(function() {
+$('#day_act').val($('#hoy').val());
+//limpio
+$("#activo_tap").val(0);
+$("#total_X_tap").val(0);
+
+$("#activo").val('');//limpio este control importante
+$("#activo_deal").val('');//limpio este control importante
+//llamo a mi carrusel
+//Mycarrusel();
+$("#activo_plato").val('1');
+animChange('plato');
+$("#activo_kaka").val('1');
+setTimeout('animChange2("kaka")',2000);
+$('#slider').s3Slider({
+            timeOut: 3000
+        });
+});
+
+
+$(function(){
+    $.ajax({
+        url: 'http://api.twitter.com/1/users/show.json',
+        data: {screen_name: 'cafeinosense'},
+        dataType: 'jsonp',
+        success: function(data) {
+            $('#followers').html(data.followers_count);
+        }
+    });
+});
+
+function changeDay(day){
+	act = $('#day_act').val();
+	$('#div_'+act).hide();
+	$('#div_b_'+day).css('background-color','#000');
+	$('#div_b_'+day).css('color','#FFF');
+	$('#div_b_'+act).css('background-color','');
+	$('#div_b_'+act).css('color','#000');
+	
+	$('#div_'+day).show();
+	
+	$('#day_act').val(day);
+}
+</script>
+<style type="text/css" media="screen">
+#slider {
+    width: 476px; /* important to be same as image width */
+    height: 318px; /* important to be same as image height */
+    /* position: relative; /* important */
+	overflow: hidden; /* important */
+}
+#sliderContent {
+    width: 476px; /* important to be same as image width or wider */
+    position: absolute;
+	/*top: 0;*/
+	margin: 0;
+	_margin-right:10px;
+	padding:0px;
+}
+.sliderImage {
+    float: left;
+    position: relative;
+	display: none;
+	border:1px solid #000000;
+	height:316px;
+}
+.sliderImage span {
+    position: absolute;
+	font: 10px/15px Arial, Helvetica, sans-serif;
+    padding: 10px;
+	background-color: #000;
+    filter: alpha(opacity=70);
+    -moz-opacity: 0.7;
+	-khtml-opacity: 0.7;
+    opacity: 0.7;
+    color:#FFFFFF;
+	width: 454px;
+	_width: 100%;
+    display: none;
+}
+.clear {
+	clear: both;
+}
+.sliderImage span strong {
+    font-size: 14px;
+}
+.top {
+	top: 0;
+	left: 0;
+}
+.bottom {
+	bottom: 0px;
+    left: 0;
+}
+ul { list-style-type: none;}
+</style>
+<style type="text/css" media="screen">
+#contenedormosaico {
+  margin: 0 auto;
+  width: 320px;
+}
+ #mosaico {
+  background-color: #000; /* el color de fondo */
+  float: left;
+  margin: 0 auto;
+  padding: 10px;
+  width: 320px; /* el ancho que debe adptarse a la cantidad */
+ }
+ #mosaico a img {border: none;}
+ #mosaico img {
+  float: left;
+  /* si queremos sobrescribir el tama�o de las im�genes */
+  height: 32px;
+  width: 32px;
+ }
+</style><style>
+#cabecera {
+   position:absolute;
+   top:0px;
+   right:0px;
+   float:right;
+   width:380px;
+}
+</style><script src="archivos/cabecera_visible.js" type="text/javascript"></script><script>
+function TamVentana() {
+     var Tamanyo = [0, 0];
+     if (typeof window.innerWidth != 'undefined'){
+         Tamanyo = [
+         window.innerWidth,
+         window.innerHeight
+         ];
+     }else if (typeof document.documentElement != 'undefined' && typeof document.documentElement.clientWidth !='undefined' && document.documentElement.clientWidth != 0){
+     Tamanyo = [
+         document.documentElement.clientWidth,
+         document.documentElement.clientHeight
+         ];
+     }else{
+         Tamanyo = [
+             document.getElementsByTagName('body')[0].clientWidth,
+             document.getElementsByTagName('body')[0].clientHeight
+         ];
+     }
+     return Tamanyo;
+ }
+function mueve_cabecera(){
+ 
+//document.getElementById('cabecera').x= 100;
+//document.getElementById('cabecera').y= 100;
+	
+	//pos = window.outerWidth;
+	var Tam = TamVentana();
+	pos = Tam[0] -431;
+	
+	xMoveTo("cabecera",pos,xScrollTop())	
+}
+function hide(element){
+document.getElementById(element).style.display ='none';
+}
+window.onscroll=mueve_cabecera
+</script><style type="text/css">
+.style2 {font-size: 18px; color: #F77531;}
+.style3 {font-size: 14px}
+.style4 {color: #B5DB5A}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+DIV.post_una {
+	BORDER-TOP: silver 1px dotted;
+	BORDER-BOTTOM: silver 1px dotted;
+}
+.menuAdmin {font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 14px;color: #FFFFFF; font-weight: bold;}
+.menuAdmin2 {font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 14px;color: #B6D95D; font-weight: bold;}
+.tdpublic {	font-family: Tahoma, Arial, Helvetica;
+	color: #666; /*#19314B;*/
+	font-size: 11px;
+	font-weight:bold;
+}
+</style><script src="archivos/AC_RunActiveContent.js" type="text/javascript"></script><script src="archivos/show.js"></script><style type="text/css">/*
+ * contextMenu.js v 1.4.0
+ * Author: Sudhanshu Yadav
+ * s-yadav.github.com
+ * Copyright (c) 2013 Sudhanshu Yadav.
+ * Dual licensed under the MIT and GPL licenses
+**/
+
+.iw-contextMenu {
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.10);
+    border: 1px solid #c8c7cc;
+    border-radius: 11px;
+    display: none;
+    z-index: 1000000132;
+    max-width: 300px;
+}
+
+.iw-cm-menu {
+    background: #fff;
+    color: #000;
+    margin: 0px;
+    padding: 0px;
+}
+
+.iw-curMenu {
+}
+
+.iw-cm-menu li {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif;
+    list-style: none;
+    padding: 10px;
+    padding-right: 20px;
+    border-bottom: 1px solid #c8c7cc;
+    cursor: pointer;
+    position: relative;
+    font-size: 14px;
+    margin: 0;
+    line-height: inherit;
+}
+
+.iw-cm-menu li:first-child {
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+}
+
+.iw-cm-menu li:last-child {
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    border-bottom: none;
+}
+
+.iw-mOverlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: #FFF;
+    opacity: .5;
+}
+
+.iw-contextMenu li.iw-mDisable {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.iw-mSelected {
+    background-color: #F6F6F6;
+}
+
+.iw-cm-arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #000;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    margin-top: -5px;
+}
+
+.iw-mSelected > .iw-cm-arrow-right {
+}
+
+/*context menu css end */</style><style type="text/css">@-webkit-keyframes load4 {
+    0%,
+    100% {
+        box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+    }
+    12.5% {
+        box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    25% {
+        box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    37.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    50% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    62.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+    75% {
+        box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+    }
+    87.5% {
+        box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+    }
+}
+
+@keyframes load4 {
+    0%,
+    100% {
+        box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+    }
+    12.5% {
+        box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    25% {
+        box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    37.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    50% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    62.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+    75% {
+        box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+    }
+    87.5% {
+        box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+    }
+}</style><style type="text/css">/* This is not a zero-length file! */</style></head>
+
+
+
+
+
+
+<body onload="javascript: rumSplash()"><div id="cabecera" style="z-index: 3000; width: 380px; left: 935px; top: 0px;">
+  <table width="380" cellspacing="0" cellpadding="0" border="0">
+    
+    <tbody><tr>
+      <td width="380" height="40" background="archivos/00vent01.png" align="right"><div onclick="javascript: $('#clikcme').slideUp('fast');$('#clikcme2').slideUp('fast');$('#telon').slideUp('fast'); $('#cabecera').slideUp('slow') " style="width:89px;cursor:pointer; margin-top:0px" align="right"><img src="archivos/00told04b.png" alt="close" name="close" id="close" width="89" height="31"></div></td>
+    </tr>
+    <tr>
+      <td valign="middle" align="left">
+      <div id="bag" style="background-color:#FFF"><div style=""><img src="archivos/00vent02.png" alt="" width="380" height="46"></div>
+      <div style="width:367px">
+      <div style="padding:0px">
+      <div id="clikcme" style="height: 10px; display: block;" align="center"></div>
+      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tbody><tr>
+          <td valign="bottom">
+          <div style="position:absolute; bottom:35px; z-index:3; width:100%" align="center"><div style="font-size:10px; font-weight:bold" align="center"><a class="uiButton" role="button" href="http://www.elchilehabanerorestaurante.com/ultimominuto.php?idpromo=1"><span class="uiButtonText">CLICK AQUI!</span></a></div></div>
+          <div style="position:absolute; bottom:45px; z-index:2"><img src="archivos/00vent03b.png" alt="" width="380" height="45"></div>
+          	<div onmouseover="javascript: $('#clikcme').slideToggle(); $('#clikcme2').slideToggle()" id="telon" style="padding: 0px; cursor: pointer; display: block;" align="center">
+        	           <div style="padding:10px" align="center">
+        	<div class="textPromo" style="font-size:18; color:#000; margin-top:2px; font-weight:bold" align="center">REGISTRATE</div>
+           </div>        	
+                       <div style="padding:10px" align="center">
+        	<div class="textPromo" style="font-size:17; color:#000000; margin-top:2px; font-weight:bold" align="center">en el club de "el mucho sabor"!</div>
+           </div>        	
+                       <div style="padding:10px" align="center">
+        	<div class="textPromo" style="font-size:17; color:#000; margin-top:2px" align="justify">y
+ obt�n GRATIS un capuchino o postre de la casa ademas de poder recibir 
+promociones, descuentos y la oportunidad de ganar noches de hospedaje en
+ Cancun, Playa del Carmen e isla mujeres</div>
+           </div>        	
+                       <ul style="height:276px; overflow:hidden; list-style-type: none; padding:0px; margin:0px">
+                        <li id="kaka_1" style="display: list-item;">
+            <div class="Text" style="font-size:18; color:#000000; padding:10px" align="center">Delicias de Yucatan</div>
+                        <div style=""><img src="archivos/_negppv040716.png"></div>
+                        </li>
+                        <li id="kaka_2" style="display: none;">
+            <div class="Text" style="font-size:18; color:#990000; padding:10px" align="center">Pan de Caz�n</div>
+                        <div style=""><img src="archivos/_c91glw040759.png"></div>
+                        </li>
+                        <li id="kaka_3" style="display: none;">
+            <div class="Text" style="font-size:18; color:#000000; padding:10px" align="center">Pollo a la Afrodita</div>
+                        <div style=""><img src="archivos/_blfc0y040727.png"></div>
+                        </li>
+                        <li id="kaka_4" style="display: none;">
+            <div class="Text" style="font-size:18; color:#000000; padding:10px" align="center">Obten descuentos y noches Gratis en los mejores hoteles de cancun!</div>
+                        <div style=""><img src="archivos/_v1lqaf040737.png"></div>
+                        </li>
+                        <input name="activo_kaka" id="activo_kaka" value="1" type="hidden">
+        	<input name="total_kaka" id="total_kaka" value="4" type="hidden">
+            </ul>
+        </div>
+        <div id="clikcme2" style="height: 10px; display: block;" align="center"></div>        </td>
+        </tr>
+      </tbody></table>
+      </div>
+      </div>      
+      </div></td>
+    </tr>
+    <tr>
+      <td align="left"><img src="archivos/00vent04.png" alt="" width="380" height="45"></td>
+    </tr>
+  </tbody></table>
+</div>
+<div id="cabecera" style="z-index:3000; width:380px">
+  <table width="380" cellspacing="0" cellpadding="0" border="0">
+    
+    <tbody><tr>
+      <td width="380" height="40" background="archivos/00vent01.png" align="right"><div onclick="javascript: $('#clikcme').slideUp('fast');$('#clikcme2').slideUp('fast');$('#telon').slideUp('fast'); $('#cabecera').slideUp('slow') " style="width:89px;cursor:pointer; margin-top:0px" align="right"><img src="archivos/00told04b.png" alt="close" name="close" id="close" width="89" height="31"></div></td>
+    </tr>
+    <tr>
+      <td valign="middle" align="left">
+      <div id="bag" style="background-color:#FFF"><div style=""><img src="archivos/00vent02.png" alt="" width="380" height="46"></div>
+      <div style="width:367px">
+      <div style="padding:0px">
+      <div id="clikcme" style="display:none; height:10px" align="center"></div>
+      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tbody><tr>
+          <td valign="bottom">
+          <div style="position:absolute; bottom:35px; z-index:3; width:100%" align="center"><div style="font-size:10px; font-weight:bold" align="center"><a class="uiButton" role="button" href="http://www.elchilehabanerorestaurante.com/ultimominuto.php?idpromo=1"><span class="uiButtonText">CLICK AQUI!</span></a></div></div>
+          <div style="position:absolute; bottom:45px; z-index:2"><img src="archivos/00vent03b.png" alt="" width="380" height="45"></div>
+          	<div onmouseover="javascript: $('#clikcme').slideToggle(); $('#clikcme2').slideToggle()" id="telon" style="padding:0px; display:none; cursor:pointer" align="center">
+        	           <div style="padding:10px" align="center">
+        	<div class="textPromo" style="font-size:18; color:#000; margin-top:2px; font-weight:bold" align="center">REGISTRATE</div>
+           </div>        	
+                       <div style="padding:10px" align="center">
+        	<div class="textPromo" style="font-size:17; color:#000000; margin-top:2px; font-weight:bold" align="center">en el club de "el mucho sabor"!</div>
+           </div>        	
+                       <div style="padding:10px" align="center">
+        	<div class="textPromo" style="font-size:17; color:#000; margin-top:2px" align="justify">y
+ obt�n GRATIS un capuchino o postre de la casa ademas de poder recibir 
+promociones, descuentos y la oportunidad de ganar noches de hospedaje en
+ Cancun, Playa del Carmen e isla mujeres</div>
+           </div>        	
+                       <ul style="height:276px; overflow:hidden; list-style-type: none; padding:0px; margin:0px">
+                        <li id="kaka_1" style=" ">
+            <div class="Text" style="font-size:18; color:#000000; padding:10px" align="center">Delicias de Yucatan</div>
+                        <div style=""><img src="archivos/_negppv040716.png"></div>
+                        </li>
+                        <li id="kaka_2" style=" display:none">
+            <div class="Text" style="font-size:18; color:#990000; padding:10px" align="center">Pan de Caz�n</div>
+                        <div style=""><img src="archivos/_c91glw040759.png"></div>
+                        </li>
+                        <li id="kaka_3" style=" display:none">
+            <div class="Text" style="font-size:18; color:#000000; padding:10px" align="center">Pollo a la Afrodita</div>
+                        <div style=""><img src="archivos/_blfc0y040727.png"></div>
+                        </li>
+                        <li id="kaka_4" style=" display:none">
+            <div class="Text" style="font-size:18; color:#000000; padding:10px" align="center">Obten descuentos y noches Gratis en los mejores hoteles de cancun!</div>
+                        <div style=""><img src="archivos/_v1lqaf040737.png"></div>
+                        </li>
+                        <input name="activo_kaka" id="activo_kaka" value="1" type="hidden">
+        	<input name="total_kaka" id="total_kaka" value="4" type="hidden">
+            </ul>
+        </div>
+        <div id="clikcme2" style="display:none; height:10px" align="center"></div>        </td>
+        </tr>
+      </tbody></table>
+      </div>
+      </div>      
+      </div></td>
+    </tr>
+    <tr>
+      <td align="left"><img src="archivos/00vent04.png" alt="" width="380" height="45"></td>
+    </tr>
+  </tbody></table>
+</div>
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td style="" class="columna_left" width="30%"></td>
+    <td width="40%"><div style="" class="bagdiv" align="center">
+<div style="" class="divancho">
+	<div id="banner">
+      <script src="archivos/swfobject.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+function pintaDiv(color, id){
+	$('#menu_'+id).css('color','#'+color);	
+}
+</script>
+<script src="archivos/AC_RunActiveContent.js" type="text/javascript"></script>
+
+<table width="1260" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td style="background-repeat:repeat-x" bgcolor="#008000" background="archivos/baner_p_1.png"><table width="790" cellspacing="0" cellpadding="0" border="0" align="center">
+      <tbody><tr>
+        <td width="790">
+         <a href="http://www.elchilehabanerorestaurante.com/index.php">
+          <div style="" class="menu_active">
+          	<div id="menu_1" style=" color:#000; float:left; height:44px" class="table_menu"><div style="padding-top:15px">INICIO</div></div>
+          </div></a>
+          <a href="http://www.elchilehabanerorestaurante.com/restaurante_menu.php">
+          <div style="color:#FFFFFF" class="menu_link" onmouseover="javascript: pintaDiv('000',2)" onmouseout="javascript: pintaDiv('FFF',2)">
+                <div id="menu_2" style=" ; float:left; height:44px" class="table_menu" align="center"><div style="padding-top:8px">NUESTRO<br>MENU</div></div>
+          </div></a>
+          <a href="http://www.elchilehabanerorestaurante.com/promociones.php">
+          <div style="" class="menu_link" onmouseover="javascript: pintaDiv('000',3)" onmouseout="javascript: pintaDiv('FFF',3)">
+                 <div id="menu_3" style=" ; float:left; height:44px" class="table_menu" align="center"><div style="padding-top:15px">ESPECIALES</div></div>
+          </div></a>
+          <a href="http://www.elchilehabanerorestaurante.com/galeria.php">
+          <div style="" class="menu_link" onmouseover="javascript: pintaDiv('000',4)" onmouseout="javascript: pintaDiv('FFF',4)">
+                 <div id="menu_4" style=" ; float:left; height:44px" class="table_menu" align="center"><div style="padding-top:15px">GALERIA</div></div>
+          </div></a>
+          <a href="http://www.elchilehabanerorestaurante.com/testimonios.php">
+          <div style="" class="menu_link" onmouseover="javascript: pintaDiv('000',5)" onmouseout="javascript: pintaDiv('FFF',5)">
+                <div id="menu_5" style=" ; float:left; height:44px" class="table_menu" align="center"><div style="padding-top:15px">TESTIMONIOS</div></div>
+          </div></a>
+          <a href="http://www.elchilehabanerorestaurante.com/links.php">
+          <div style="" class="menu_link" onmouseover="javascript: pintaDiv('000',6)" onmouseout="javascript: pintaDiv('FFF',6)">
+                 <div id="menu_6" style=" ; float:left; height:44px" class="table_menu" align="center"><div style="padding-top:15px">LINKS</div></div>
+          </div></a>
+          <a href="http://www.elchilehabanerorestaurante.com/contactenos.php">
+          <div style="" class="menu_link" onmouseover="javascript: pintaDiv('000',7)" onmouseout="javascript: pintaDiv('FFF',7)">
+                <div id="menu_7" style="float: left; height: 44px; border: 0px none; color: rgb(255, 255, 255);" class="table_menu" align="center"><div style="padding-top:8px">CONTACTENOS<br>
+                (999) 930 9507</div>
+                </div>
+          </div></a>
+          
+          </td>
+      </tr>
+    </tbody></table></td>
+  </tr>
+  <tr>
+    <td height="15" background="archivos/marco_v_1.png"><img src="archivos/marco_v_1.png" width="1" height="15"></td>
+  </tr>
+  <tr>
+    <td><table width="100%" cellspacing="0" cellpadding="0" bordercolor="#FFFFFF" border="0">
+      <tbody><tr>
+        <td width="28%"><img src="archivos/chilehabanerorestaurante_logo.png" width="488" height="218"></td>
+        <td style="background-repeat:repeat-x" width="72%" valign="bottom" bgcolor="#FFFFFF" background="archivos/baner_p_2bag.png" align="right">
+		<div id="b_1"><embed type="application/x-shockwave-flash" src="archivos/banner.swf" id="mefisto" name="mefisto" bgcolor="#FFFFFF" quality="high" allowscriptaccess="sameDomain" movie="images/menu.swf" menu="false" wmode="transparent" width="763" height="217"></div>
+		<script type="text/javascript" charset="utf-8">
+			  var so = new SWFObject("images/banner.swf", "mefisto", "763", "217", "7", "#FFFFFF");
+			  so.addParam("allowScriptAccess", "sameDomain");
+			  so.addParam("movie", "images/menu.swf");
+			  so.addParam("quality", "high");
+			  so.addParam("menu", "false");
+			  so.addParam("wmode", "transparent");
+			  so.write("b_1");
+		</script></td>
+      </tr>
+    </tbody></table></td>
+  </tr>
+</tbody></table>
+    </div>
+    <div style="" class="bagdivcolor">
+	 <div align="right"><img src="archivos/00imslogancocina.png" width="471" height="25"></div>
+    
+    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+      <tbody><tr>
+        <td width="33%" valign="top">
+        <div style="border-bottom:1px solid #000000; margin-bottom:1px">
+       <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td>
+                <div id="div_b_Sa" onclick="javascript: if($('#day_act').val()!='Sa'){ changeDay('Sa')}" style="float:right; margin-left:3px; padding:2px 3px 4px 3px; background-color:#; color:#000; cursor:pointer" class="Text menu_link">Sa</div>
+                <div id="div_b_Vi" onclick="javascript: if($('#day_act').val()!='Vi'){ changeDay('Vi')}" style="float:right; margin-left:3px; padding:2px 3px 4px 3px; background-color:#; color:#000; cursor:pointer" class="Text menu_link">Vi</div>
+                <div id="div_b_Ju" onclick="javascript: if($('#day_act').val()!='Ju'){ changeDay('Ju')}" style="float:right; margin-left:3px; padding:2px 3px 4px 3px; background-color:#; color:#000; cursor:pointer" class="Text menu_link">Ju</div>
+                <div id="div_b_Mi" onclick="javascript: if($('#day_act').val()!='Mi'){ changeDay('Mi')}" style="float:right; margin-left:3px; padding:2px 3px 4px 3px; background-color:#000; color:#FFF; cursor:pointer" class="Text menu_link">Mi</div>
+                <div id="div_b_Ma" onclick="javascript: if($('#day_act').val()!='Ma'){ changeDay('Ma')}" style="float:right; margin-left:3px; padding:2px 3px 4px 3px; background-color:#; color:#000; cursor:pointer" class="Text menu_link">Ma</div>
+                <div id="div_b_Lu" onclick="javascript: if($('#day_act').val()!='Lu'){ changeDay('Lu')}" style="float:right; margin-left:3px; padding:2px 3px 4px 3px; background-color:#; color:#000; cursor:pointer" class="Text menu_link">Lu</div>
+                <div id="div_b_Do" onclick="javascript: if($('#day_act').val()!='Do'){ changeDay('Do')}" style="float:right; margin-left:3px; padding:2px 3px 4px 3px; background-color:#; color:#000; cursor:pointer" class="Text menu_link">Do</div>
+                <div style="float:left; color:#000000" class="Text">Menu solo para EJECUTIVOS y de FIN DE SEMANA para entrega a domicilio!<span style="margin:0px 10px 0px 10px; overflow: hidden;">
+          </span></div>
+    </td>
+  </tr>
+</tbody></table></div>
+
+            <div id="div_Do" style=" display:none">
+        <div style="margin-bottom:1px; padding-left:5px; background-color:FFF; height:40px" class="">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td width="84%" height="40">
+                    <div style="float:left; color:#FF6600; font-size:12px" class="Text">
+               	  1 - 1 Kg de deliciosa carne de Poc-chuc o Pierna asada
+ a la Yucateca acompa�ada de salsa de chiltomate, cebolla morada, 
+frijoles colados y tortillas hechas a mano                   </div>
+                                    </td>
+          <td width="16%" bgcolor="#FF6600">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td width="16%"><img src="archivos/00im10punta.png" width="10" height="14"></td>
+    <td width="84%" align="right"><div style="color:#FFF; font-size:12px; padding-right:4px; font-weight:bold" class="Text">
+						$120.00                  </div></td>
+  </tr>
+</tbody></table>          </td>
+            </tr>
+        </tbody></table>
+</div>
+
+    
+        <div style="margin-bottom:1px; padding-left:5px; background-color:FFF; height:40px" class="">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td width="84%" height="40">
+                    <div style="float:left; color:#990000; font-size:12px" class="Text">
+               	  2 - 1 Kg de deliciosa carne al Pastor acompa�ada de 
+salsas, guacamole, frijoles charros y tortillas hechas a mano           
+         </div>
+                                    </td>
+          <td width="16%" bgcolor="#990000">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td width="16%"><img src="archivos/00im10punta.png" width="10" height="14"></td>
+    <td width="84%" align="right"><div style="color:#FFF; font-size:12px; padding-right:4px; font-weight:bold" class="Text">
+						$220.00                  </div></td>
+  </tr>
+</tbody></table>          </td>
+            </tr>
+        </tbody></table>
+</div>
+
+    
+        <div style="margin-bottom:1px; padding-left:5px; background-color:FFF; height:40px" class="">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td width="84%" height="40">
+                    <div style="float:left; color:#FF6600; font-size:12px" class="Text">
+               	  3 - Pizza Familiar Especial de la casa. Combinaci�n de
+ jamon, pi�a, champi�on natural, chorizo, salami, pimiento y cebolla.   
+                </div>
+                                    </td>
+          <td width="16%" bgcolor="#FF6600">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td width="16%"><img src="archivos/00im10punta.png" width="10" height="14"></td>
+    <td width="84%" align="right"><div style="color:#FFF; font-size:12px; padding-right:4px; font-weight:bold" class="Text">
+						$236.00                  </div></td>
+  </tr>
+</tbody></table>          </td>
+            </tr>
+        </tbody></table>
+</div>
+
+    
+        <div style="margin-bottom:1px; padding-left:5px; background-color:FFF; height:40px" class="">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td width="84%" height="40">
+                    <div style="float:left; color:#FF6600; font-size:12px" class="Text">
+               	  4 - Ceviche mixto de Pulpo y Camaron acompa�ado de aceite de olivo, guacamole y totopos !                   </div>
+                                    </td>
+          <td width="16%" bgcolor="#FF6600">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td width="16%"><img src="archivos/00im10punta.png" width="10" height="14"></td>
+    <td width="84%" align="right"><div style="color:#FFF; font-size:12px; padding-right:4px; font-weight:bold" class="Text">
+						$145.00                  </div></td>
+  </tr>
+</tbody></table>          </td>
+            </tr>
+        </tbody></table>
+</div>
+
+    
+        <input name="day_act" id="day_act" value="Mi" type="hidden">
+    <input name="hoy" id="hoy" value="Mi" type="hidden">
+      <div id="promotion" style="">
+            <div style="color:#FFFFFF; font-size:12px; background-color:#330000; padding:2px 2px 2px 5px; font-weight:bold; margin-bottom:1px" class="Text">Por 20 pesos a�adale a tu orden un litro de Agua de Horchata, Jamaica, Tamarindo o Pepsi de 2  Litros</div>
+           <div style="color:#FFFFFF; font-size:12px; background-color:#FF6600; padding:2px 2px 2px 5px; font-weight:bold; margin-bottom:1px" class="Text">Por 15 pesos a�adale una deliciosa sopa de Lima o por 20 pesos media orden de ensalada Mixta de Vegetales!</div>
+          </div> 
+        
+    </div>
+	    <div id="div_Lu" style=" display:none">
+        <div style="margin-bottom:1px; padding-left:5px; background-color:FFF; height:40px" class="">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td width="84%" height="40">
+                    <div style="float:left; color:#990033; font-size:12px" class="Text">
+               	  1 - Delicioso espagueti a la Bolo�esa                   </div>
+                                    </td>
+          <td width="16%" bgcolor="#990033">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td width="16%"><img src="archivos/00im10punta.png" width="10" height="14"></td>
+    <td width="84%" align="right"><div style="color:#FFF; font-size:12px; padding-right:4px; font-weight:bold" class="Text">
+						$77.00                  </div></td>
+  </tr>
+</tbody></table>          </td>
+            </tr>
+        </tbody></table>
+</div>
+
+    
+        <div style="margin-bottom:1px; padding-left:5px; background-color:FFF; height:40px" class="">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td width="84%" height="40">
+                    <div style="float:left; color:#003333; font-size:12px" class="Text">
+               	  2 - Chuletas a la Yucateca acompanadas de Arroz y Frijol                   </div>
+                                    </td>
+          <td width="16%" bgcolor="#003333">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td width="16%"><img src="archivos/00im10punta.png" width="10" height="14"></td>
+    <td width="84%" align="right"><div style="color:#FFF; font-size:12px; padding-right:4px; font-weight:bold" class="Text">
+						$77.00                  </div></td>
+  </tr>
+</tbody></table>          </td>
+            </tr>
+        </tbody></table>
+</div>
+
+    
+        <div style="margin-bottom:1px; padding-left:5px; background-color:FFF; height:40px" class="">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td width="84%" height="40">
+                    <div style="float:left; color:#003333; font-size:12px" class="Text">
+               	  3 - Filete Mig�on a la Pimienta acompa�ado de papa al horno y verduras al vapor                   </div>
+                  <div style="color:#FF0000" class="Text">- NEW</div>                  </td>
+          <td width="16%" bgcolor="#003333">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td width="16%"><img src="archivos/00im10punta.png" width="10" height="14"></td>
+    <td width="84%" align="right"><div style="color:#FFF; font-size:12px; padding-right:4px; font-weight:bold" class="Text">
+						$145.00                  </div></td>
+  </tr>
+</tbody></table>          </td>
+            </tr>
+        </tbody></table>
+</div>
+
+    
+        <input name="day_act" id="day_act" value="Mi" type="hidden">
+    <input name="hoy" id="hoy" value="Mi" type="hidden">
+      <div id="promotion" style="">
+            <div style="color:#f2f2f2; font-size:12px; background-color:#990033; padding:2px 2px 2px 5px; font-weight:bold; margin-bottom:1px" class="Text">Por 15 pesos   a�adale una deliciosa sopa de Lima o por 20 pesos   media orden de ensalada Mixta de Vegetales!</div>
+           <div style="color:#f2f2f2; font-size:12px; background-color:#003333; padding:2px 2px 2px 5px; font-weight:bold; margin-bottom:1px" class="Text">Por 20 pesos a�adale a tu orden un litro de Agua de Horchata, Jamaica, Tamarindo o Pepsi de 2  Litros</div>
+          </div> 
+        
+    </div>
+	    <div id="div_Ma" style=" display:none">
+        <div style="margin-bottom:1px; padding-left:5px; background-color:FFF; height:40px" class="">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td width="84%" height="40">
+                    <div style="float:left; color:#19314B; font-size:12px" class="Text">
+               	  1 - Pasta Carbonara con el toque de nuestro Chef                   </div>
+                                    </td>
+          <td width="16%" bgcolor="#000">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td width="16%"><img src="archivos/00im10punta.png" width="10" height="14"></td>
+    <td width="84%" align="right"><div style="color:#FFF; font-size:12px; padding-right:4px; font-weight:bold" class="Text">
+						$75.00                  </div></td>
+  </tr>
+</tbody></table>          </td>
+            </tr>
+        </tbody></table>
+</div>
+
+    
+        <div style="margin-bottom:1px; padding-left:5px; background-color:FFF; height:40px" class="">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td width="84%" height="40">
+                    <div style="float:left; color:#FF3333; font-size:12px" class="Text">
+               	  2 - Ceviche Mixto de Camaron y Pulpo                   </div>
+                                    </td>
+          <td width="16%" bgcolor="#FF3333">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td width="16%"><img src="archivos/00im10punta.png" width="10" height="14"></td>
+    <td width="84%" align="right"><div style="color:#FFF; font-size:12px; padding-right:4px; font-weight:bold" class="Text">
+						$145.00                  </div></td>
+  </tr>
+</tbody></table>          </td>
+            </tr>
+        </tbody></table>
+</div>
+
+    
+        <div style="margin-bottom:1px; padding-left:5px; background-color:FFF; height:40px" class="">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td width="84%" height="40">
+                    <div style="float:left; color:#FF3333; font-size:13px" class="Text">
+               	  3 - Arrachera calidad premium con la receta secreta de
+ la casa acompanada de guacamole, cebollas cambray y deliciosas salsas  
+                 </div>
+                                    </td>
+          <td width="16%" bgcolor="#FF3333">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td width="16%"><img src="archivos/00im10punta.png" width="10" height="14"></td>
+    <td width="84%" align="right"><div style="color:#FFF; font-size:13px; padding-right:4px; font-weight:bold" class="Text">
+						$145.00                  </div></td>
+  </tr>
+</tbody></table>          </td>
+            </tr>
+        </tbody></table>
+</div>
+
+    
+        <input name="day_act" id="day_act" value="Mi" type="hidden">
+    <input name="hoy" id="hoy" value="Mi" type="hidden">
+      <div id="promotion" style="">
+            <div style="color:#FFFFFF; font-size:12px; background-color:#FF3333; padding:2px 2px 2px 5px; font-weight:bold; margin-bottom:1px" class="Text">Por 15 pesos a�adale una deliciosa sopa de Lima o por 20 pesos media orden de ensalada Mixta de Vegetales!</div>
+           <div style="color:#FFFFFF; font-size:12px; background-color:#333333; padding:2px 2px 2px 5px; font-weight:bold; margin-bottom:1px" class="Text">Por 20 pesos a�adale a tu orden un litro de Agua de Horchata, Jamaica, Tamarindo o Pepsi de 2 Litros</div>
+          </div> 
+        
+    </div>
+	    <div id="div_Mi" style=" ">
+        <div style="margin-bottom:1px; padding-left:5px; background-color:FFF; height:40px" class="">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td width="84%" height="40">
+                    <div style="float:left; color:#19314B; font-size:12px" class="Text">
+               	  1 - Espagueti Frutti di Mare. Mariscos mixtos y salsa de tomate                   </div>
+                                    </td>
+          <td width="16%" bgcolor="#000">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td width="16%"><img src="archivos/00im10punta.png" width="10" height="14"></td>
+    <td width="84%" align="right"><div style="color:#FFF; font-size:12px; padding-right:4px; font-weight:bold" class="Text">
+						$125.00                  </div></td>
+  </tr>
+</tbody></table>          </td>
+            </tr>
+        </tbody></table>
+</div>
+
+    
+        <div style="margin-bottom:1px; padding-left:5px; background-color:FFF; height:40px" class="">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td width="84%" height="40">
+                    <div style="float:left; color:#19314B; font-size:12px" class="Text">
+               	  2 - Pechuga de Pollo a la Afrodita                   </div>
+                                    </td>
+          <td width="16%" bgcolor="#993366">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td width="16%"><img src="archivos/00im10punta.png" width="10" height="14"></td>
+    <td width="84%" align="right"><div style="color:#FFF; font-size:12px; padding-right:4px; font-weight:bold" class="Text">
+						$99.00                  </div></td>
+  </tr>
+</tbody></table>          </td>
+            </tr>
+        </tbody></table>
+</div>
+
+    
+        <input name="day_act" id="day_act" value="Mi" type="hidden">
+    <input name="hoy" id="hoy" value="Mi" type="hidden">
+      <div id="promotion" style="">
+            <div style="color:#FFFFFF; font-size:12px; background-color:#993366; padding:2px 2px 2px 5px; font-weight:bold; margin-bottom:1px" class="Text">Por 15 pesos a�adale una deliciosa sopa de Lima o por 20 pesos media orden de ensalada Mixta de Vegetales!</div>
+           <div style="color:#FFFFFF; font-size:12px; background-color:#000000; padding:2px 2px 2px 5px; font-weight:bold; margin-bottom:1px" class="Text">Por 20 pesos a�adale a tu orden un litro de Agua de Horchata, Jamaica, Tamarindo o Pepsi de 2 Litros</div>
+          </div> 
+        
+    </div>
+	    <div id="div_Ju" style=" display:none">
+        <div style="margin-bottom:1px; padding-left:5px; background-color:FFF; height:40px" class="">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td width="84%" height="40">
+                    <div style="float:left; color:#CC3300; font-size:12px" class="Text">
+               	  1 - LASA�A BOLO�ESA                    </div>
+                  <div style="color:#FF0000" class="Text">- NEW</div>                  </td>
+          <td width="16%" bgcolor="#CC3300">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td width="16%"><img src="archivos/00im10punta.png" width="10" height="14"></td>
+    <td width="84%" align="right"><div style="color:#FFF; font-size:12px; padding-right:4px; font-weight:bold" class="Text">
+						$59.00                  </div></td>
+  </tr>
+</tbody></table>          </td>
+            </tr>
+        </tbody></table>
+</div>
+
+    
+        <div style="margin-bottom:1px; padding-left:5px; background-color:FFF; height:40px" class="">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td width="84%" height="40">
+                    <div style="float:left; color:#990000; font-size:12px" class="Text">
+               	  2 - De Cuba: Masa de cerdo con Moros y Cristianos                   </div>
+                  <div style="color:#FF0000" class="Text">- NEW</div>                  </td>
+          <td width="16%" bgcolor="#990000">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td width="16%"><img src="archivos/00im10punta.png" width="10" height="14"></td>
+    <td width="84%" align="right"><div style="color:#FFF; font-size:12px; padding-right:4px; font-weight:bold" class="Text">
+						$59.00                  </div></td>
+  </tr>
+</tbody></table>          </td>
+            </tr>
+        </tbody></table>
+</div>
+
+    
+        <div style="margin-bottom:1px; padding-left:5px; background-color:FFF; height:40px" class="">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td width="84%" height="40">
+                    <div style="float:left; color:#CC3300; font-size:12px" class="Text">
+               	  3 - Filete Mig�on a la Pimienta                   </div>
+                                    </td>
+          <td width="16%" bgcolor="#CC3300">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td width="16%"><img src="archivos/00im10punta.png" width="10" height="14"></td>
+    <td width="84%" align="right"><div style="color:#FFF; font-size:12px; padding-right:4px; font-weight:bold" class="Text">
+						$145.00                  </div></td>
+  </tr>
+</tbody></table>          </td>
+            </tr>
+        </tbody></table>
+</div>
+
+    
+        <div style="margin-bottom:1px; padding-left:5px; background-color:FFF; height:40px" class="">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td width="84%" height="40">
+                    <div style="float:left; color:#990000; font-size:12px" class="Text">
+               	  4 - De nuestra cultura Maya: Pescado Tikin - Xik                   </div>
+                  <div style="color:#FF0000" class="Text">- NEW</div>                  </td>
+          <td width="16%" bgcolor="#990000">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td width="16%"><img src="archivos/00im10punta.png" width="10" height="14"></td>
+    <td width="84%" align="right"><div style="color:#FFF; font-size:12px; padding-right:4px; font-weight:bold" class="Text">
+						$99.00                  </div></td>
+  </tr>
+</tbody></table>          </td>
+            </tr>
+        </tbody></table>
+</div>
+
+    
+        <input name="day_act" id="day_act" value="Mi" type="hidden">
+    <input name="hoy" id="hoy" value="Mi" type="hidden">
+      <div id="promotion" style="">
+            <div style="color:#FFFFFF; font-size:12px; background-color:#CC3300; padding:2px 2px 2px 5px; font-weight:bold; margin-bottom:1px" class="Text">Por 15 pesos a�adale una deliciosa sopa de Lima o por 20 pesos media orden de ensalada Mixta de Vegetales!</div>
+           <div style="color:#FFFFFF; font-size:12px; background-color:#990000; padding:2px 2px 2px 5px; font-weight:bold; margin-bottom:1px" class="Text">Por 20 pesos a�adale a tu orden un litro de Agua de Horchata, Jamaica, Tamarindo o Pepsi de 2 Litros</div>
+          </div> 
+        
+    </div>
+	    <div id="div_Vi" style=" display:none">
+        <div style="margin-bottom:1px; padding-left:5px; background-color:FFF; height:40px" class="">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td width="84%" height="40">
+                    <div style="float:left; color:#CC3333; font-size:12px" class="Text">
+               	  1 - MEGA EMPANADA rellenas de Maricos                   </div>
+                                    </td>
+          <td width="16%" bgcolor="#CC0033">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td width="16%"><img src="archivos/00im10punta.png" width="10" height="14"></td>
+    <td width="84%" align="right"><div style="color:#FFF; font-size:12px; padding-right:4px; font-weight:bold" class="Text">
+						$49.00                  </div></td>
+  </tr>
+</tbody></table>          </td>
+            </tr>
+        </tbody></table>
+</div>
+
+    
+        <div style="margin-bottom:1px; padding-left:5px; background-color:FFF; height:40px" class="">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td width="84%" height="40">
+                    <div style="float:left; color:#19314B; font-size:12px" class="Text">
+               	  2 - Deliciosa Pizza Personal de Camarones y Agua de Horchata, Jamaica o Tamarindo                   </div>
+                                    </td>
+          <td width="16%" bgcolor="#000">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td width="16%"><img src="archivos/00im10punta.png" width="10" height="14"></td>
+    <td width="84%" align="right"><div style="color:#FFF; font-size:12px; padding-right:4px; font-weight:bold" class="Text">
+						$55.00                  </div></td>
+  </tr>
+</tbody></table>          </td>
+            </tr>
+        </tbody></table>
+</div>
+
+    
+        <div style="margin-bottom:1px; padding-left:5px; background-color:FFF; height:40px" class="">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td width="84%" height="40">
+                    <div style="float:left; color:#CC3333; font-size:12px" class="Text">
+               	  3 - De Cuba: Masa de cerdo con Moros y Cristianos                   </div>
+                  <div style="color:#FF0000" class="Text">- NEW</div>                  </td>
+          <td width="16%" bgcolor="#CC3333">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td width="16%"><img src="archivos/00im10punta.png" width="10" height="14"></td>
+    <td width="84%" align="right"><div style="color:#FFF; font-size:12px; padding-right:4px; font-weight:bold" class="Text">
+						$59.00                  </div></td>
+  </tr>
+</tbody></table>          </td>
+            </tr>
+        </tbody></table>
+</div>
+
+    
+        <div style="margin-bottom:1px; padding-left:5px; background-color:FFF; height:40px" class="">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td width="84%" height="40">
+                    <div style="float:left; color:#19314B; font-size:12px" class="Text">
+               	  4 - Pescado Empanizado � al Mojo de Ajo acompa�ado de arroz y verduras                   </div>
+                                    </td>
+          <td width="16%" bgcolor="#000">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td width="16%"><img src="archivos/00im10punta.png" width="10" height="14"></td>
+    <td width="84%" align="right"><div style="color:#FFF; font-size:12px; padding-right:4px; font-weight:bold" class="Text">
+						$59.00                  </div></td>
+  </tr>
+</tbody></table>          </td>
+            </tr>
+        </tbody></table>
+</div>
+
+    
+        <div style="margin-bottom:1px; padding-left:5px; background-color:FFF; height:40px" class="">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td width="84%" height="40">
+                    <div style="float:left; color:#CC3333; font-size:12px" class="Text">
+               	  5 - Delicioso Ceviche Mixto de Camaron y Pulpo                   </div>
+                                    </td>
+          <td width="16%" bgcolor="#CC3333">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td width="16%"><img src="archivos/00im10punta.png" width="10" height="14"></td>
+    <td width="84%" align="right"><div style="color:#FFF; font-size:12px; padding-right:4px; font-weight:bold" class="Text">
+						$77.00                  </div></td>
+  </tr>
+</tbody></table>          </td>
+            </tr>
+        </tbody></table>
+</div>
+
+    
+        <div style="margin-bottom:1px; padding-left:5px; background-color:FFF; height:40px" class="">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td width="84%" height="40">
+                    <div style="float:left; color:#19314B; font-size:12px" class="Text">
+               	  6 - Del toque Gourmet de nuestro Chef: Espaguetti Frutti di Mare                   </div>
+                                    </td>
+          <td width="16%" bgcolor="#000">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td width="16%"><img src="archivos/00im10punta.png" width="10" height="14"></td>
+    <td width="84%" align="right"><div style="color:#FFF; font-size:12px; padding-right:4px; font-weight:bold" class="Text">
+						$77.00                  </div></td>
+  </tr>
+</tbody></table>          </td>
+            </tr>
+        </tbody></table>
+</div>
+
+    
+        <div style="margin-bottom:1px; padding-left:5px; background-color:FFF; height:40px" class="">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td width="84%" height="40">
+                    <div style="float:left; color:#CC3333; font-size:12px" class="Text">
+               	  7 - De nuestra cultura Maya: Pescado Tikin - Xik                   </div>
+                  <div style="color:#FF0000" class="Text">- NEW</div>                  </td>
+          <td width="16%" bgcolor="#CC3333">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td width="16%"><img src="archivos/00im10punta.png" width="10" height="14"></td>
+    <td width="84%" align="right"><div style="color:#FFF; font-size:12px; padding-right:4px; font-weight:bold" class="Text">
+						$135.00                  </div></td>
+  </tr>
+</tbody></table>          </td>
+            </tr>
+        </tbody></table>
+</div>
+
+    
+        <input name="day_act" id="day_act" value="Mi" type="hidden">
+    <input name="hoy" id="hoy" value="Mi" type="hidden">
+      <div id="promotion" style="">
+            <div style="color:#FFFFFF; font-size:12px; background-color:#CC3333; padding:2px 2px 2px 5px; font-weight:bold; margin-bottom:1px" class="Text">Por 15 pesos a�adale una deliciosa sopa de Lima o por 20 pesos media orden de ensalada Mixta de Vegetales!</div>
+           <div style="color:#FFFFFF; font-size:12px; background-color:#000000; padding:2px 2px 2px 5px; font-weight:bold; margin-bottom:1px" class="Text">Por 20 pesos a�adale a tu orden un litro de Agua de Horchata, Jamaica, Tamarindo o Pepsi de 2 Litros</div>
+          </div> 
+        
+    </div>
+	    <div id="div_Sa" style=" display:none">
+        <div style="margin-bottom:1px; padding-left:5px; background-color:FFF; height:40px" class="">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td width="84%" height="40">
+                    <div style="float:left; color:#000000; font-size:12px" class="Text">
+               	  1 - 1 Kg de deliciosa carne de Poc-chuc o Pierna asada
+ a la Yucateca acompa�ada de salsa de chiltomate, cebolla morada, 
+frijoles colados y tortillas hechas a mano                   </div>
+                                    </td>
+          <td width="16%" bgcolor="#996666">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td width="16%"><img src="archivos/00im10punta.png" width="10" height="14"></td>
+    <td width="84%" align="right"><div style="color:#FFF; font-size:12px; padding-right:4px; font-weight:bold" class="Text">
+						$120.00                  </div></td>
+  </tr>
+</tbody></table>          </td>
+            </tr>
+        </tbody></table>
+</div>
+
+    
+        <div style="margin-bottom:1px; padding-left:5px; background-color:FFF; height:40px" class="">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td width="84%" height="40">
+                    <div style="float:left; color:#000000; font-size:12px" class="Text">
+               	  2 - 1 Kg de deliciosa carne al Pastor acompa�ada de 
+salsas, guacamole, frijoles charros y tortillas hechas a mano           
+         </div>
+                                    </td>
+          <td width="16%" bgcolor="#CC3399">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td width="16%"><img src="archivos/00im10punta.png" width="10" height="14"></td>
+    <td width="84%" align="right"><div style="color:#FFF; font-size:12px; padding-right:4px; font-weight:bold" class="Text">
+						$220.00                  </div></td>
+  </tr>
+</tbody></table>          </td>
+            </tr>
+        </tbody></table>
+</div>
+
+    
+        <div style="margin-bottom:1px; padding-left:5px; background-color:FFF; height:40px" class="">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td width="84%" height="40">
+                    <div style="float:left; color:#000000; font-size:12px" class="Text">
+               	  3 - 3 X 2 en pizza Familiar Especial de la casa                   </div>
+                                    </td>
+          <td width="16%" bgcolor="#996666">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td width="16%"><img src="archivos/00im10punta.png" width="10" height="14"></td>
+    <td width="84%" align="right"><div style="color:#FFF; font-size:12px; padding-right:4px; font-weight:bold" class="Text">
+						$236.00                  </div></td>
+  </tr>
+</tbody></table>          </td>
+            </tr>
+        </tbody></table>
+</div>
+
+    
+        <div style="margin-bottom:1px; padding-left:5px; background-color:FFF; height:40px" class="">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td width="84%" height="40">
+                    <div style="float:left; color:#000000; font-size:12px" class="Text">
+               	  4 - 1 Kg de deliciosa Arrachera calidad Premium, 
+acompa�ada de frijoles charros, salsas, guacamole y tortillas hechas a 
+mano!                   </div>
+                                    </td>
+          <td width="16%" bgcolor="#CC3399">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td width="16%"><img src="archivos/00im10punta.png" width="10" height="14"></td>
+    <td width="84%" align="right"><div style="color:#FFF; font-size:12px; padding-right:4px; font-weight:bold" class="Text">
+						$295.00                  </div></td>
+  </tr>
+</tbody></table>          </td>
+            </tr>
+        </tbody></table>
+</div>
+
+    
+        <div style="margin-bottom:1px; padding-left:5px; background-color:FFF; height:40px" class="">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+                <td width="84%" height="40">
+                    <div style="float:left; color:#000000; font-size:12px" class="Text">
+               	  5 - 1 Kg de deliciosa Ceviche mixto de Pulpo y Camaron
+ acompa�ado de aceite de olivo, guacamole y totopos !                   </div>
+                                    </td>
+          <td width="16%" bgcolor="#000">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td width="16%"><img src="archivos/00im10punta.png" width="10" height="14"></td>
+    <td width="84%" align="right"><div style="color:#FFF; font-size:12px; padding-right:4px; font-weight:bold" class="Text">
+						$295.00                  </div></td>
+  </tr>
+</tbody></table>          </td>
+            </tr>
+        </tbody></table>
+</div>
+
+    
+        <input name="day_act" id="day_act" value="Mi" type="hidden">
+    <input name="hoy" id="hoy" value="Mi" type="hidden">
+      <div id="promotion" style="">
+            <div style="color:#FFFFFF; font-size:12px; background-color:#996666; padding:2px 2px 2px 5px; font-weight:bold; margin-bottom:1px" class="Text">Por 15 pesos a�adale una deliciosa sopa de Lima o por 20 pesos media orden de ensalada Mixta de Vegetales!</div>
+           <div style="color:#FFFFFF; font-size:12px; background-color:#CC3399; padding:2px 2px 2px 5px; font-weight:bold; margin-bottom:1px" class="Text">Por 20 pesos a�adale a tu orden un litro de Agua de Horchata, Jamaica, Tamarindo o Pepsi de 2 Litros</div>
+          </div> 
+        
+    </div>
+	        </td>
+        <td width="32%" valign="top">
+        <div style="margin:0px 10px 0px 10px; height:315px; overflow: hidden;">
+                     <div id="plato_1" style="margin-bottom: 10px; display: none;">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+          <tbody><tr>
+            <td width="30%"><div style="border:1px solid #000000"><img src="archivos/_Polloalaparmesana.jpg" width="144" height="96"></div></td>
+            <td width="70%" valign="top">
+            <div style="margin-left:10px; height:97px; border-bottom:1px solid #000000; color:#000000">
+            <div class="TextOferta" style="color:#000; font-size:15px">POLLO A LA PARMESANA</div>
+            <div style="font-weight:bold; font-size:16px" class="TextPrecio" align="left">$115.00 <span style="font-size:11px">pesos</span></div>
+            <div style="background:url(images/00im10punta3.png); background-repeat:no-repeat; padding-left:13px; margin-top:10px">
+                        <div style="font-size:11px; color:#584026" class="TextOferta">Pechuga de Pollo Empanizada Ba�ada con Salsa de Tomate y Queso Gratinado</div>
+                        </div>
+            </div>
+            </td>
+          </tr>
+        </tbody></table>
+        </div>
+               <div id="plato_2" style="margin-bottom: 10px; display: none;">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+          <tbody><tr>
+            <td width="30%"><div style="border:1px solid #000000"><img src="archivos/_deliciasdeyucatan.jpg" width="144" height="96"></div></td>
+            <td width="70%" valign="top">
+            <div style="margin-left:10px; height:97px; border-bottom:1px solid #000000; color:#000000">
+            <div class="TextOferta" style="color:#000; font-size:15px">DELICIAS DE YUCATAN</div>
+            <div style="font-weight:bold; font-size:16px" class="TextPrecio" align="left">$125.00 <span style="font-size:11px">pesos</span></div>
+            <div style="background:url(images/00im10punta3.png); background-repeat:no-repeat; padding-left:13px; margin-top:10px">
+                        </div>
+            </div>
+            </td>
+          </tr>
+        </tbody></table>
+        </div>
+               <div id="plato_3" style="margin-bottom: 10px; display: none;">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+          <tbody><tr>
+            <td width="30%"><div style="border:1px solid #000000"><img src="archivos/_filetemignonalapimientaOK.jpg" width="144" height="96"></div></td>
+            <td width="70%" valign="top">
+            <div style="margin-left:10px; height:97px; border-bottom:1px solid #000000; color:#000000">
+            <div class="TextOferta" style="color:#000; font-size:15px">FILETE MIG�ON A LA PIMIENTA</div>
+            <div style="font-weight:bold; font-size:16px" class="TextPrecio" align="left">$145.00 <span style="font-size:11px">pesos</span></div>
+            <div style="background:url(images/00im10punta3.png); background-repeat:no-repeat; padding-left:13px; margin-top:10px">
+                        <div style="font-size:11px; color:#584026" class="TextOferta">Acompa�ado con Papa al Horno y Vegetales al Vapor</div>
+                        </div>
+            </div>
+            </td>
+          </tr>
+        </tbody></table>
+        </div>
+               <div id="plato_4" style="margin-bottom: 10px; display: none;">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+          <tbody><tr>
+            <td width="30%"><div style="border:1px solid #000000"><img src="archivos/_polloafroditaOk.jpg" width="144" height="96"></div></td>
+            <td width="70%" valign="top">
+            <div style="margin-left:10px; height:97px; border-bottom:1px solid #000000; color:#000000">
+            <div class="TextOferta" style="color:#000; font-size:15px">POLLO A LA  AFRODITA</div>
+            <div style="font-weight:bold; font-size:16px" class="TextPrecio" align="left">$145.00 <span style="font-size:11px">pesos</span></div>
+            <div style="background:url(images/00im10punta3.png); background-repeat:no-repeat; padding-left:13px; margin-top:10px">
+                        <div style="font-size:11px; color:#584026" class="TextOferta">Con Aderezo receta secreta de la casa y acompa�ado de chaya con crema, y ensalada de frutas</div>
+                        </div>
+            </div>
+            </td>
+          </tr>
+        </tbody></table>
+        </div>
+               <div id="plato_5" style="margin-bottom: 10px; display: none;">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+          <tbody><tr>
+            <td width="30%"><div style="border:1px solid #000000"><img src="archivos/_comida-36ok.jpg" width="144" height="96"></div></td>
+            <td width="70%" valign="top">
+            <div style="margin-left:10px; height:97px; border-bottom:1px solid #000000; color:#000000">
+            <div class="TextOferta" style="color:#000; font-size:15px">*HAMBURGUESA CON QUESO Y TOCINO</div>
+            <div style="font-weight:bold; font-size:16px" class="TextPrecio" align="left">$59.00 <span style="font-size:11px">pesos</span></div>
+            <div style="background:url(images/00im10punta3.png); background-repeat:no-repeat; padding-left:13px; margin-top:10px">
+                        </div>
+            </div>
+            </td>
+          </tr>
+        </tbody></table>
+        </div>
+               <div id="plato_6" style="margin-bottom: 10px; display: none;">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+          <tbody><tr>
+            <td width="30%"><div style="border:1px solid #000000"><img src="archivos/_tortacubana2.jpg" width="144" height="96"></div></td>
+            <td width="70%" valign="top">
+            <div style="margin-left:10px; height:97px; border-bottom:1px solid #000000; color:#000000">
+            <div class="TextOferta" style="color:#000; font-size:15px">*TORTA CUBANA</div>
+            <div style="font-weight:bold; font-size:16px" class="TextPrecio" align="left">$69.00 <span style="font-size:11px">pesos</span></div>
+            <div style="background:url(images/00im10punta3.png); background-repeat:no-repeat; padding-left:13px; margin-top:10px">
+                        </div>
+            </div>
+            </td>
+          </tr>
+        </tbody></table>
+        </div>
+               <div id="plato_7" style="margin-bottom: 10px; display: none;">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+          <tbody><tr>
+            <td width="30%"><div style="border:1px solid #000000"><img src="archivos/_ensaladaGriega.jpg" width="144" height="96"></div></td>
+            <td width="70%" valign="top">
+            <div style="margin-left:10px; height:97px; border-bottom:1px solid #000000; color:#000000">
+            <div class="TextOferta" style="color:#000; font-size:15px">ENSALADA GRIEGA</div>
+            <div style="font-weight:bold; font-size:16px" class="TextPrecio" align="left">$77.00 <span style="font-size:11px">pesos</span></div>
+            <div style="background:url(images/00im10punta3.png); background-repeat:no-repeat; padding-left:13px; margin-top:10px">
+                        </div>
+            </div>
+            </td>
+          </tr>
+        </tbody></table>
+        </div>
+               <div id="plato_8" style="margin-bottom: 10px; display: none;">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+          <tbody><tr>
+            <td width="30%"><div style="border:1px solid #000000"><img src="archivos/_cochinitapibilpaginacafeinosense.jpg" width="144" height="96"></div></td>
+            <td width="70%" valign="top">
+            <div style="margin-left:10px; height:97px; border-bottom:1px solid #000000; color:#000000">
+            <div class="TextOferta" style="color:#000; font-size:15px">COCHINITA PIBIL</div>
+            <div style="font-weight:bold; font-size:16px" class="TextPrecio" align="left">$77.00 <span style="font-size:11px">pesos</span></div>
+            <div style="background:url(images/00im10punta3.png); background-repeat:no-repeat; padding-left:13px; margin-top:10px">
+                        </div>
+            </div>
+            </td>
+          </tr>
+        </tbody></table>
+        </div>
+              
+                        <div id="plato_9" style="margin-bottom: 10px; display: none;">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+          <tbody><tr>
+            <td width="30%"><div style="border:1px solid #000000"><img src="archivos/_pizzadepeperoni.jpg" width="144" height="96"></div></td>
+            <td width="70%" valign="top">
+            <div style="margin-left:10px; height:97px; border-bottom:1px solid #000000; font-size:15px; color:#000000">
+            <div class="TextOferta">PEPERONI</div>
+            <div style="font-weight:bold; font-size:16px" class="TextPrecio" align="left">$59.00 <span style="font-size:11px">pesos</span></div>
+            <div style="background:url(images/00im10punta3.png); background-repeat:no-repeat; padding-left:13px; margin-top:10px">
+                        </div>
+            </div>
+            </td>
+          </tr>
+        </tbody></table>
+        </div>
+               <div id="plato_10" style="margin-bottom: 10px; display: none;">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+          <tbody><tr>
+            <td width="30%"><div style="border:1px solid #000000"><img src="archivos/_comida_dia_2-27.jpg" width="144" height="96"></div></td>
+            <td width="70%" valign="top">
+            <div style="margin-left:10px; height:97px; border-bottom:1px solid #000000; font-size:15px; color:#000000">
+            <div class="TextOferta">MEXICANA</div>
+            <div style="font-weight:bold; font-size:16px" class="TextPrecio" align="left">$69.00 <span style="font-size:11px">pesos</span></div>
+            <div style="background:url(images/00im10punta3.png); background-repeat:no-repeat; padding-left:13px; margin-top:10px">
+                        </div>
+            </div>
+            </td>
+          </tr>
+        </tbody></table>
+        </div>
+               <div id="plato_11" style="margin-bottom: 10px; display: none;">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+          <tbody><tr>
+            <td width="30%"><div style="border:1px solid #000000"><img src="archivos/_PIZZAESPECIALDELACASA.jpg" width="144" height="96"></div></td>
+            <td width="70%" valign="top">
+            <div style="margin-left:10px; height:97px; border-bottom:1px solid #000000; font-size:15px; color:#000000">
+            <div class="TextOferta">ESPECIAL DE LA CASA</div>
+            <div style="font-weight:bold; font-size:16px" class="TextPrecio" align="left">$74.00 <span style="font-size:11px">pesos</span></div>
+            <div style="background:url(images/00im10punta3.png); background-repeat:no-repeat; padding-left:13px; margin-top:10px">
+                        </div>
+            </div>
+            </td>
+          </tr>
+        </tbody></table>
+        </div>
+               <div id="plato_12" style="margin-bottom: 10px; display: none;">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+          <tbody><tr>
+            <td width="30%"><div style="border:1px solid #000000"><img src="archivos/_pizzaalpastor102.jpg" width="144" height="96"></div></td>
+            <td width="70%" valign="top">
+            <div style="margin-left:10px; height:97px; border-bottom:1px solid #000000; font-size:15px; color:#000000">
+            <div class="TextOferta">AL PASTOR</div>
+            <div style="font-weight:bold; font-size:16px" class="TextPrecio" align="left">$74.00 <span style="font-size:11px">pesos</span></div>
+            <div style="background:url(images/00im10punta3.png); background-repeat:no-repeat; padding-left:13px; margin-top:10px">
+                        </div>
+            </div>
+            </td>
+          </tr>
+        </tbody></table>
+        </div>
+               <div id="plato_13" style="margin-bottom: 10px;">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+          <tbody><tr>
+            <td width="30%"><div style="border:1px solid #000000"><img src="archivos/_comida_dia_2-44.jpg" width="144" height="96"></div></td>
+            <td width="70%" valign="top">
+            <div style="margin-left:10px; height:97px; border-bottom:1px solid #000000; font-size:15px; color:#000000">
+            <div class="TextOferta">CAMARONES</div>
+            <div style="font-weight:bold; font-size:16px" class="TextPrecio" align="left">$95.00 <span style="font-size:11px">pesos</span></div>
+            <div style="background:url(images/00im10punta3.png); background-repeat:no-repeat; padding-left:13px; margin-top:10px">
+                        </div>
+            </div>
+            </td>
+          </tr>
+        </tbody></table>
+        </div>
+         
+        <input name="activo_plato" id="activo_plato" value="13" type="hidden">
+        <input name="act_plato_1" id="act_plato_1" value="13" type="hidden">
+        <input name="act_plato_2" id="act_plato_2" value="14" type="hidden">
+        <input name="act_plato_3" id="act_plato_3" value="15" type="hidden">
+        <input name="total_plato" id="total_plato" value="13" type="hidden">
+        </div>
+        
+        </td>
+        <td width="35%" valign="top">
+        <div id="slider" style="padding:0px; margin:0px">
+        <ul id="sliderContent" style="">
+        	        
+            <li class="sliderImage" style="display: none;">
+                <img src="archivos/small_pizzaalpastor102.jpg" alt="Disfruta de una Pizza Grande Al Pastor + 3 cervezas � refrescos" border="0">
+                <span class="top" style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); display: none;"><strong>Disfruta de una Pizza Grande Al Pastor + 3 cervezas � refrescos $149.00</strong><br></span>
+            </li>
+              
+            <li class="sliderImage" style="display: none;">
+                <img src="archivos/small_deliciasdeyucatan.jpg" alt="Delicias de Yucatan" border="0">
+                <span class="bottom" style="background-color: rgb(102, 204, 255); color: rgb(0, 0, 204); display: none;"><strong>Delicias de Yucatan $125.00</strong><br>Deliciosa
+ combinaci�n de platos t�picos de Yucat�n: Sopa de Lima, Salbut, 
+longaniza de Valladolid, Poc-chuc y Pierna Asada a la Yucateca. </span>
+            </li>
+              
+            <li class="sliderImage" style="display: list-item;">
+                <img src="archivos/small_polloafroditaOk.jpg" alt="Pollo a la Afrodita" border="0">
+                <span class="bottom" style="background-color: rgb(153, 0, 204); color: rgb(255, 255, 255); display: block;"><strong>Pollo a la Afrodita $145.00</strong><br>De la Nueva cocina Yucateca y creaci�n de nuestro Chef: Pollo a la Afrodita. Con ingredientes 100 % de Yucat�n.</span>
+            </li>
+              
+            <li class="sliderImage" style="display: none;">
+                <img src="archivos/small_cebichedecamaronRegional2.jpg" alt="Ceviche de Camar�n Pulpo(mediano)" border="0">
+                <span class="bottom" style="background-color: rgb(255, 51, 204); color: rgb(255, 255, 255); display: none;"><strong>Ceviche de Camar�n Pulpo(mediano) $145.00</strong><br>Frescos
+ y deliciosos mariscos del Golfo de M�xico con tomate, cebolla, 
+cilantro. Marinados con jugo de lim�n y el toque de la receta secreta de
+ nuestro Chef! </span>
+            </li>
+              
+            <li class="sliderImage" style="display: none;">
+                <img src="archivos/small_cochinitapibilpaginacafeinosense.jpg" alt="Cochinita Pibil Light" border="0">
+                <span class="top" style="background-color: rgb(153, 255, 255); color: rgb(0, 102, 204); display: none;"><strong>Cochinita Pibil Light $77.00</strong><br>La
+ receta tradicional con la mejor carne de pierna de cerdo baja en grasa,
+ aconpa�ado con salsa de cebolla morada, naranja agria y chile 
+habanero(opcional).</span>
+            </li>
+                        <div class="clear sliderImage"></div>
+        </ul>
+    </div>
+   
+        </td>
+      </tr>
+    </tbody></table>
+    
+    <div style="">
+    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tbody><tr><td width="50%" valign="top" align="center">        <div style="background:url(images/esquina4.png); background-repeat:no-repeat; background-position:0px 10px; width:100%">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td><div style="margin-top:10px; padding-left:80px" class="TextPrecio" align="left">Un lugar para todos los gustos y posibilidades</div></td>
+  </tr>
+</tbody></table>
+
+          <div style="width:95%; background-color:#008000; padding:5px" class="ui-corner-all">
+                        <div style="border-color:#666; padding:5px; background-color:#EEDECA " class="borderAbajoDiscontinuo ">
+              <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody><tr>
+                  <td><div style="float:left;font-size:14px" class="Text">
+ En EL Chile Habanero Restaurante Usted encontrar� en un ambiente 
+moderno y casual un amplio y variado menu que satisface los gustos m�s 
+variados y exigentes. Los mejores ingredientes y un standart de alta 
+calidad en la elaboraci�n de nuestros platillos son la mejor garant�a! </div>
+                    </td>
+                  </tr>
+                </tbody></table>
+              </div>
+                        </div>
+          </div>
+        </td><td width="50%" valign="top" align="center">        <div style="background:url(images/esquina4.png); background-repeat:no-repeat; background-position:0px 10px; width:100%">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td><div style="margin-top:10px; padding-left:80px" class="TextPrecio" align="left">El mejor lugar para disfrutar de lo mejor de la Comida Yucateca</div></td>
+  </tr>
+</tbody></table>
+
+          <div style="width:95%; background-color:#008000; padding:5px" class="ui-corner-all">
+                        <div style="border-color:#666; padding:5px; background-color:#F4E9DC " class="borderAbajoDiscontinuo ">
+              <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody><tr>
+                  <td><div style="float:left;font-size:14px" class="Text">
+ El mejor lugar en M�rida, Yucat�n, M�xico donde puedes disfrutar de una
+ deliciosa Sopa de Lima, Salbutes, Panuchos, Cochinita � Pollo Pibil, 
+Pierna Asada, Poc-chuc, entre otros deliciosos platos de la cocina 
+tradicional Yucateca y descubrir nuevos sabores con el Pollo a la 
+Afrodita, creaci�n de nuestro Chef y en un ambiente confortable, casual,
+ moderno y con excelente servicio! </div>
+                    </td>
+                  </tr>
+                </tbody></table>
+              </div>
+                        </div>
+          </div>
+        </td></tr><tr><td width="50%" valign="top" align="center">        <div style="background:url(images/esquina4.png); background-repeat:no-repeat; background-position:0px 10px; width:100%">
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td><div style="margin-top:10px; padding-left:80px" class="TextPrecio" align="left">Comida Mediterranea . . . . </div></td>
+  </tr>
+</tbody></table>
+
+          <div style="width:95%; background-color:#008000; padding:5px" class="ui-corner-all">
+                        <div style="border-color:#666; padding:5px; background-color:#EEDECA " class="borderAbajoDiscontinuo ">
+              <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody><tr>
+                  <td><div style="float:left;font-size:14px" class="Text">
+ En EL Chile habanero Restaurante podr�s disfrutar de una deliciosa 
+ensalada Griega o Caprese, exquisitas pastas (Carbonara, a la bolo�esa, 
+Frutti de Mare, Lasa�a, Primavera o como tu la prefieras. Un delicioso 
+Filete Mi�on o variados platos de mariscos! </div>
+                    </td>
+                  </tr>
+                </tbody></table>
+              </div>
+                        </div>
+          </div>
+        </td></tr>     </tbody></table>
+    </div>
+    
+    <div style="margin-top:10px">
+    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td>
+    <div style="float:right; color:#492e2d; margin-bottom:3px" class="Text">
+    		<strong>Cafeinosense</strong> con <span id="followers"></span> seguidores en Twitter.
+    </div>
+    <div style="float:right">
+        </div>
+    </td>
+  </tr>
+</tbody></table>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td>
+    <div style="float:right; margin-left:26px"><img src="archivos/facebook.png"></div>
+    <div style="float:right"><img src="archivos/twitter1.png"></div>
+        </td>
+  </tr>
+</tbody></table>
+
+    </div>
+    </div>
+	<div style="background-color:#008000; border-top:1px solid #FFFFFF"><div style="background:url(images/baner_p_1.png); background-repeat:repeat-x">
+<div style="" align="center">
+        <table width="80%" align="center">
+        <tbody><tr>
+                <td width="20%">
+		<a href="http://www.elchilehabanerorestaurante.com/index.php">
+        <div style="padding:5px"><div class="TextLink" align="center">Inicio</div>
+        </div></a>
+        </td>
+		        <td width="20%">
+		<a href="http://www.elchilehabanerorestaurante.com/restaurante_menu.php">
+        <div style="padding:5px"><div class="TextLink" align="center">Nuestro Menu</div>
+        </div></a>
+        </td>
+		        <td width="20%">
+		<a href="http://www.elchilehabanerorestaurante.com/promociones.php">
+        <div style="padding:5px"><div class="TextLink" align="center">Promociones Especiales</div>
+        </div></a>
+        </td>
+		        <td width="20%">
+		<a href="http://www.elchilehabanerorestaurante.com/galeria.php">
+        <div style="padding:5px"><div class="TextLink" align="center">Galeria</div>
+        </div></a>
+        </td>
+		        <td width="20%">
+		<a href="http://www.elchilehabanerorestaurante.com/ultimominuto.php">
+        <div style="padding:5px"><div class="TextLink" align="center">Ultimo Minuto</div>
+        </div></a>
+        </td>
+		        <td width="20%">
+		<a href="http://www.elchilehabanerorestaurante.com/testimonios.php">
+        <div style="padding:5px"><div class="TextLink" align="center">Testimonios</div>
+        </div></a>
+        </td>
+		        <td width="20%">
+		<a href="http://www.elchilehabanerorestaurante.com/contactenos.php">
+        <div style="padding:5px"><div class="TextLink" align="center">Cont�ctenos</div>
+        </div></a>
+        </td>
+		        </tr></tbody></table>
+  </div>
+  <div style="color:#FFFFFF; font-weight:normal" class="TextLink" align="center">
+  � 2010 elchilehabanerorestaurante<br>
+  El Chilehabanero Restaurante: Restaurante, Caf� y Bar.<br>
+  El Chilehabanero Restaurante: Ensaladas, Sandwiches y Pizzas<br>
+  El Chilehabanero Restaurante: Autentica comida Mexicana<br>
+
+El Chilehabanero Restaurante: Autentica comida Yucateca y Mediterranea con el toque gourmet de nuestro Chef<br>
+
+El Chilehabanero Restaurante: Localizado en el centro Historico de Merida, Yucatan Mexico.
+
+ </div>
+
+</div></div></div>
+</div></td>
+    <td class="columna_right" width="30%"></td>
+  </tr>
+</tbody></table>
+
+
+
+</body></html>
