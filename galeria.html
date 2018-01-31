@@ -1,0 +1,543 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+<title>El Chilehabanero Restaurante: Galeria de Nuestro Restaurante. 
+Autentica comida Yucateca y Mediterranea con el toque gourmet de nuestro
+ Chef. Ensaladas, Sandwiches y Pizzas.</title>
+<meta name="keywords" content="restaurante de comida regional merida, comida yucateca merida yucatan, comida tradicional en merida yucatan, traditional yucatecan food, regional food in merida yucatan, mexican food in merida yucatan, restaurante en merida">
+<meta name="description" content="Restaurante, Caf� y Bar. Autentica comida Yucateca y Mediterranea. Ensaladas, Sandwiches y Pizzas Merida, Yucatan, buffetes de comida, bufet de comida, comida autentica, buen sabor, comida especial, desayunos ligeros, cafeteria restaurante, restaurante cafeter�a,merida cefeter�a, cafeter�a yucat�n, cafeter�a merida, cafe merida, cafe yucat�n, pizzas mexicanas abuen precio, pizzas de buen sabor, ensaladas mexicanas">
+<meta http-equiv="Content-language" content="es">
+<meta name="robots" content="index,follow">
+<meta name="revisit-after" content="15 days">
+<meta http-equiv="distribution" content="Global">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="icon" href="http://www.elchilehabanerorestaurante.com/images/ico.png" type="image/x-icon">
+<link rel="icon" href="http://www.elchilehabanerorestaurante.com/images/ico.png" type="image/x-icon">  
+<link rel="shortcut icon" href="http://www.elchilehabanerorestaurante.com/images/ico.png" type="image/x-icon">
+<link href="galeria/estilos.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="galeria/jquery.js"></script>
+<script language="JavaScript" src="galeria/main.js"></script>
+<script language="JavaScript" src="galeria/global.js"></script>
+<script type="text/javascript" src="galeria/easySlider.js"></script>
+<script src="galeria/swfobject_modified.js" type="text/javascript"></script>
+<script type="text/JavaScript">
+$(document).ready(function(){
+	$("#slider").easySlider({
+		auto: false,
+		//Puedes modificar las opciones de los botones
+		//prevImg: 'images/prev_slider.png',
+		//nextText: 'Next',		
+		firstShow: true,
+		lastShow: true,
+		//Si el efecto lo kieres lograr verticalmente
+		//vertical: true, 
+		continuous: true,
+		controlsdiv:	'control1',
+	});
+});
+
+function reloadImg(path, name, gallery)
+{
+$('#reloadimg').prepend('<div style="position:absolute;width:450px" align="center"><img src="images/cargando.gif" alt="cargando" /></div>');
+//$('#reloadimg').html('<div style="position:absolute;width:450px" align="center"><img src="images/cargando.gif" alt="cargando" /></div>' + $('#panel_tap').val());
+$.ajax({
+	type:"POST",
+	url:"./include/reload_img.php",
+	data:"name=" + name+ "&path="+path +"&gallery=" + gallery,
+	success: function(msg) {
+		$('#reloadimg').html(msg);
+	}		
+});
+}
+
+function reloadpage(action){
+$('#step').val(action);
+document.gopage.submit();
+}
+</script>
+<style type="text/css" media="screen">
+#slider {
+    width: 536px; /* important to be same as image width */
+    height: 418px; /* important to be same as image height */
+    /* position: relative; /* important */
+	overflow: hidden; /* important */
+	padding-left:10px;
+}
+#sliderContent {
+    width: 536px; /* important to be same as image width or wider */
+    position: absolute;
+	/*top: 0;*/
+	margin: 0px;
+	padding:0px;
+}
+div.sliderImage {
+    float: left;
+    /*position: relative;
+	display: none;*/
+	width:536px;
+	height:418px;
+}
+.sliderImage span {
+    position: absolute;
+	font: 10px/15px Arial, Helvetica, sans-serif;
+    padding: 10px;
+	background-color: #000;
+    filter: alpha(opacity=70);
+    -moz-opacity: 0.7;
+	-khtml-opacity: 0.7;
+    opacity: 0.7;
+    color:#FFFFFF;
+	width: 454px;
+	_width: 100%;
+    display: none;
+}
+.clear {
+	clear: both;
+}
+.sliderImage span strong {
+    font-size: 14px;
+}
+.top {
+	top: 0;
+	left: 0;
+}
+.bottom {
+	bottom: 0px;
+    left: 0;
+}
+ul { list-style-type: none;}
+div.myfoto{
+cursor:pointer;
+float:left; width:144px; margin-bottom:7px; height:125px; _height:135px; background-color:#FFF; margin-right:10px; padding:5px 10px 5px 10px;
+}
+	span#prevBtn{}
+	span#nextBtn{}					
+#nextBtn img, #firstBtn img, #prevBtn img, #lastBtn img{
+	border:none;
+}
+span#nextBtn , span#firstBtn, span#prevBtn, span#lastBtn{
+	padding:2px; margin:0px;
+}
+span#nextBtn2 , span#firstBtn2, span#prevBtn2, span#lastBtn2{
+	padding:0px; margin:0px;
+}
+
+#controlsBefore div{
+	background-color:#F00;
+}
+/* // Easy Slider */
+
+</style>
+<script src="galeria/AC_RunActiveContent.js" type="text/javascript"></script>
+
+<style type="text/css" media="screen">
+#contenedormosaico {
+  margin: 0 auto;
+  width: 320px;
+}
+ #mosaico {
+  background-color: #000; /* el color de fondo */
+  float: left;
+  margin: 0 auto;
+  padding: 10px;
+  width: 320px; /* el ancho que debe adptarse a la cantidad */
+ }
+ #mosaico a img {border: none;}
+ #mosaico img {
+  float: left;
+  /* si queremos sobrescribir el tama�o de las im�genes */
+  height: 32px;
+  width: 32px;
+ }
+</style><style type="text/css">/*
+ * contextMenu.js v 1.4.0
+ * Author: Sudhanshu Yadav
+ * s-yadav.github.com
+ * Copyright (c) 2013 Sudhanshu Yadav.
+ * Dual licensed under the MIT and GPL licenses
+**/
+
+.iw-contextMenu {
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.10);
+    border: 1px solid #c8c7cc;
+    border-radius: 11px;
+    display: none;
+    z-index: 1000000132;
+    max-width: 300px;
+}
+
+.iw-cm-menu {
+    background: #fff;
+    color: #000;
+    margin: 0px;
+    padding: 0px;
+}
+
+.iw-curMenu {
+}
+
+.iw-cm-menu li {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif;
+    list-style: none;
+    padding: 10px;
+    padding-right: 20px;
+    border-bottom: 1px solid #c8c7cc;
+    cursor: pointer;
+    position: relative;
+    font-size: 14px;
+    margin: 0;
+    line-height: inherit;
+}
+
+.iw-cm-menu li:first-child {
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+}
+
+.iw-cm-menu li:last-child {
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    border-bottom: none;
+}
+
+.iw-mOverlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: #FFF;
+    opacity: .5;
+}
+
+.iw-contextMenu li.iw-mDisable {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.iw-mSelected {
+    background-color: #F6F6F6;
+}
+
+.iw-cm-arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #000;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    margin-top: -5px;
+}
+
+.iw-mSelected > .iw-cm-arrow-right {
+}
+
+/*context menu css end */</style><style type="text/css">@-webkit-keyframes load4 {
+    0%,
+    100% {
+        box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+    }
+    12.5% {
+        box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    25% {
+        box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    37.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    50% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    62.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+    75% {
+        box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+    }
+    87.5% {
+        box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+    }
+}
+
+@keyframes load4 {
+    0%,
+    100% {
+        box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+    }
+    12.5% {
+        box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    25% {
+        box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    37.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    50% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    62.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+    75% {
+        box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+    }
+    87.5% {
+        box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+    }
+}</style><style type="text/css">/* This is not a zero-length file! */</style></head>
+
+<body>
+<div id="LayerImg" class="borderDiscontinuo" style="position:absolute; z-index:4; display:none; background-color:#F7F7F7; left: 347px; top: 143px; padding:10px; color:#666">
+<div id="div_layerImg"></div>
+</div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td style="" class="columna_left" width="30%"></td>
+    <td width="40%"><div style="width:1260px" class="bagdiv" align="center">
+<div style="" class="divancho">
+	<div id="banner">
+	  <script src="galeria/swfobject.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+function pintaDiv(color, id){
+	$('#menu_'+id).css('color','#'+color);	
+}
+</script>
+<script src="galeria/AC_RunActiveContent.js" type="text/javascript"></script>
+
+<table width="1260" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td style="background-repeat:repeat-x" bgcolor="#008000" background="galeria/baner_p_1.png"><table width="790" cellspacing="0" cellpadding="0" border="0" align="center">
+      <tbody><tr>
+        <td width="790">
+         <a href="http://www.elchilehabanerorestaurante.com/index.php">
+          <div style="" class="menu_link" onmouseover="javascript: pintaDiv('000',1)" onmouseout="javascript: pintaDiv('FFF',1)">
+          	<div id="menu_1" style="float: left; height: 44px; color: rgb(255, 255, 255);" class="table_menu"><div style="padding-top:15px">INICIO</div></div>
+          </div></a>
+          <a href="http://www.elchilehabanerorestaurante.com/restaurante_menu.php">
+          <div style="color:#FFFFFF" class="menu_link" onmouseover="javascript: pintaDiv('000',2)" onmouseout="javascript: pintaDiv('FFF',2)">
+                <div id="menu_2" style="float: left; height: 44px; color: rgb(255, 255, 255);" class="table_menu" align="center"><div style="padding-top:8px">NUESTRO<br>MENU</div></div>
+          </div></a>
+          <a href="http://www.elchilehabanerorestaurante.com/promociones.php">
+          <div style="" class="menu_link" onmouseover="javascript: pintaDiv('000',3)" onmouseout="javascript: pintaDiv('FFF',3)">
+                 <div id="menu_3" style="float: left; height: 44px; color: rgb(255, 255, 255);" class="table_menu" align="center"><div style="padding-top:15px">ESPECIALES</div></div>
+          </div></a>
+          <a href="http://www.elchilehabanerorestaurante.com/galeria.php">
+          <div style="" class="menu_active">
+                 <div id="menu_4" style=" ; float:left; height:44px" class="table_menu" align="center"><div style="padding-top:15px">GALERIA</div></div>
+          </div></a>
+          <a href="http://www.elchilehabanerorestaurante.com/testimonios.php">
+          <div style="" class="menu_link" onmouseover="javascript: pintaDiv('000',5)" onmouseout="javascript: pintaDiv('FFF',5)">
+                <div id="menu_5" style="float: left; height: 44px; color: rgb(255, 255, 255);" class="table_menu" align="center"><div style="padding-top:15px">TESTIMONIOS</div></div>
+          </div></a>
+          <a href="http://www.elchilehabanerorestaurante.com/links.php">
+          <div style="" class="menu_link" onmouseover="javascript: pintaDiv('000',6)" onmouseout="javascript: pintaDiv('FFF',6)">
+                 <div id="menu_6" style="float: left; height: 44px; color: rgb(255, 255, 255);" class="table_menu" align="center"><div style="padding-top:15px">LINKS</div></div>
+          </div></a>
+          <a href="http://www.elchilehabanerorestaurante.com/contactenos.php">
+          <div style="" class="menu_link" onmouseover="javascript: pintaDiv('000',7)" onmouseout="javascript: pintaDiv('FFF',7)">
+                <div id="menu_7" style="float: left; height: 44px; border: 0px none; color: rgb(255, 255, 255);" class="table_menu" align="center"><div style="padding-top:8px">CONTACTENOS<br>
+                (999) 930 9507</div>
+                </div>
+          </div></a>
+          
+          </td>
+      </tr>
+    </tbody></table></td>
+  </tr>
+  <tr>
+    <td height="15" background="galeria/marco_v_1.png"><img src="galeria/marco_v_1.png" width="1" height="15"></td>
+  </tr>
+  <tr>
+    <td><table width="100%" cellspacing="0" cellpadding="0" bordercolor="#FFFFFF" border="0">
+      <tbody><tr>
+        <td width="28%"><img src="galeria/chilehabanerorestaurante_logo.png" width="488" height="218"></td>
+        <td style="background-repeat:repeat-x" width="72%" valign="bottom" bgcolor="#FFFFFF" background="galeria/baner_p_2bag.png" align="right">
+		<div id="b_1"><embed type="application/x-shockwave-flash" src="galeria/banner.swf" id="mefisto" name="mefisto" bgcolor="#FFFFFF" quality="high" allowscriptaccess="sameDomain" movie="images/menu.swf" menu="false" wmode="transparent" width="763" height="217"></div>
+		<script type="text/javascript" charset="utf-8">
+			  var so = new SWFObject("images/banner.swf", "mefisto", "763", "217", "7", "#FFFFFF");
+			  so.addParam("allowScriptAccess", "sameDomain");
+			  so.addParam("movie", "images/menu.swf");
+			  so.addParam("quality", "high");
+			  so.addParam("menu", "false");
+			  so.addParam("wmode", "transparent");
+			  so.write("b_1");
+		</script></td>
+      </tr>
+    </tbody></table></td>
+  </tr>
+</tbody></table>
+	</div>
+    <div class="bagdivcolor" style=""><div style="margin-bottom:10px"><img src="galeria/galeriadenuestromenu.png" width="523" height="36"></div>
+      
+    <form name="gopage" id="gopage" action="galeria.php" method="post">
+    <input name="step" id="step" value="" type="hidden">
+    </form>
+    
+      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td>
+    <div style="float:left; background-color:#FF9900; padding:5px; margin-left:30px; font-size:13px; font-weight:bold; color:#FFFFFF" class="ui-corner-top textHelv">Imagenes de Nuestro Menu</div>
+    <div onclick="javascript: reloadpage('restaurante')" style="float:left; background-color:#FFB54A; padding:5px 10px 5px 10px; margin-left:30px; font-size:13px; font-weight:bold; cursor:pointer" class="ui-corner-top textHelv">Lo que sucede en El chile Habanero</div>
+    </td>
+  </tr>
+</tbody></table>
+      <div style="width:96%; margin-bottom:20px; padding:10px; background-color:#ff9904" class="Text ui-corner-all" align="center">
+     <div style="background-color:#FFFFFF; margin-bottom:10px" class="Text ui-corner-all">
+       <table width="100%" cellspacing="0" cellpadding="0" border="0">
+         <tbody><tr>
+           <td width="54%" bgcolor="#F9F1F1"><div id="slider" style="width: 536px; height: 418px; overflow: hidden;">
+        <ul style="margin: 0px; padding: 0px; width: 1072px;">
+    <li class="sliderImage" style="float:left; width: 536px; height:418px" id="kaka_1">            <div onclick="javascript: reloadImg('_clubsandwichnuevomenu.jpg','*CLUB SANDWICH', '1')" style="" class="ui-corner-all myfoto">
+                <div style="width:144px"><img src="galeria/_clubsandwichnuevomenu.jpg" style="border:1px solid #000000" class="ui" width="144" height="96"></div>
+                <div style="" class="regularBoldText" align="center">*CLUB SANDWICH</div>
+            </div>
+                <div onclick="javascript: reloadImg('_comida-36ok.jpg','*HAMBURGUESA CON QUESO Y TOCINO', '1')" style="" class="ui-corner-all myfoto">
+                <div style="width:144px"><img src="galeria/_comida-36ok.jpg" style="border:1px solid #000000" class="ui" width="144" height="96"></div>
+                <div style="" class="regularBoldText" align="center">*HAMBURGUESA CON QUESO Y TOCINO</div>
+            </div>
+                <div onclick="javascript: reloadImg('_tortacubana2.jpg','*TORTA CUBANA', '1')" style="" class="ui-corner-all myfoto">
+                <div style="width:144px"><img src="galeria/_tortacubana2.jpg" style="border:1px solid #000000" class="ui" width="144" height="96"></div>
+                <div style="" class="regularBoldText" align="center">*TORTA CUBANA</div>
+            </div>
+                <div onclick="javascript: reloadImg('_cochinitapibilpaginacafeinosense.jpg','COCHINITA PIBIL', '1')" style="" class="ui-corner-all myfoto">
+                <div style="width:144px"><img src="galeria/_cochinitapibilpaginacafeinosense.jpg" style="border:1px solid #000000" class="ui" width="144" height="96"></div>
+                <div style="" class="regularBoldText" align="center">COCHINITA PIBIL</div>
+            </div>
+                <div onclick="javascript: reloadImg('_deliciasdeyucatan.jpg','DELICIAS DE YUCATAN', '1')" style="" class="ui-corner-all myfoto">
+                <div style="width:144px"><img src="galeria/_deliciasdeyucatan.jpg" style="border:1px solid #000000" class="ui" width="144" height="96"></div>
+                <div style="" class="regularBoldText" align="center">DELICIAS DE YUCATAN</div>
+            </div>
+                <div onclick="javascript: reloadImg('_ensaladaGriega.jpg','ENSALADA GRIEGA', '1')" style="" class="ui-corner-all myfoto">
+                <div style="width:144px"><img src="galeria/_ensaladaGriega.jpg" style="border:1px solid #000000" class="ui" width="144" height="96"></div>
+                <div style="" class="regularBoldText" align="center">ENSALADA GRIEGA</div>
+            </div>
+                <div onclick="javascript: reloadImg('_filetemignonalapimientaOK.jpg','FILETE MIG�ON A LA PIMIENTA', '1')" style="" class="ui-corner-all myfoto">
+                <div style="width:144px"><img src="galeria/_filetemignonalapimientaOK.jpg" style="border:1px solid #000000" class="ui" width="144" height="96"></div>
+                <div style="" class="regularBoldText" align="center">FILETE MIG�ON A LA PIMIENTA</div>
+            </div>
+                <div onclick="javascript: reloadImg('_polloafroditaOk.jpg','POLLO A LA  AFRODITA', '1')" style="" class="ui-corner-all myfoto">
+                <div style="width:144px"><img src="galeria/_polloafroditaOk.jpg" style="border:1px solid #000000" class="ui" width="144" height="96"></div>
+                <div style="" class="regularBoldText" align="center">POLLO A LA  AFRODITA</div>
+            </div>
+                <div onclick="javascript: reloadImg('_Polloalaparmesana.jpg','POLLO A LA PARMESANA', '1')" style="" class="ui-corner-all myfoto">
+                <div style="width:144px"><img src="galeria/_Polloalaparmesana.jpg" style="border:1px solid #000000" class="ui" width="144" height="96"></div>
+                <div style="" class="regularBoldText" align="center">POLLO A LA PARMESANA</div>
+            </div>
+    </li><li class="sliderImage" style="float:left; width: 536px; height:418px" id="kaka_2">            <div onclick="javascript: reloadImg('_pizzadepeperoni.jpg','PEPERONI', '1')" style="" class="ui-corner-all myfoto">
+                <div style="width:144px"><img src="galeria/_pizzadepeperoni.jpg" style="border:1px solid #000000" class="ui" width="144" height="96"></div>
+                <div style="" class="regularBoldText" align="center">PEPERONI</div>
+            </div>
+                <div onclick="javascript: reloadImg('_comida_dia_2-27.jpg','MEXICANA', '1')" style="" class="ui-corner-all myfoto">
+                <div style="width:144px"><img src="galeria/_comida_dia_2-27.jpg" style="border:1px solid #000000" class="ui" width="144" height="96"></div>
+                <div style="" class="regularBoldText" align="center">MEXICANA</div>
+            </div>
+                <div onclick="javascript: reloadImg('_PIZZAESPECIALDELACASA.jpg','ESPECIAL DE LA CASA', '1')" style="" class="ui-corner-all myfoto">
+                <div style="width:144px"><img src="galeria/_PIZZAESPECIALDELACASA.jpg" style="border:1px solid #000000" class="ui" width="144" height="96"></div>
+                <div style="" class="regularBoldText" align="center">ESPECIAL DE LA CASA</div>
+            </div>
+                <div onclick="javascript: reloadImg('_pizzaalpastor102.jpg','AL PASTOR', '1')" style="" class="ui-corner-all myfoto">
+                <div style="width:144px"><img src="galeria/_pizzaalpastor102.jpg" style="border:1px solid #000000" class="ui" width="144" height="96"></div>
+                <div style="" class="regularBoldText" align="center">AL PASTOR</div>
+            </div>
+                <div onclick="javascript: reloadImg('_comida_dia_2-44.jpg','CAMARONES', '1')" style="" class="ui-corner-all myfoto">
+                <div style="width:144px"><img src="galeria/_comida_dia_2-44.jpg" style="border:1px solid #000000" class="ui" width="144" height="96"></div>
+                <div style="" class="regularBoldText" align="center">CAMARONES</div>
+            </div>
+    </li>	
+
+  </ul>
+  </div></td>
+           <td width="646" height="431"><div id="reloadimg" style="">
+           <table width="646" cellspacing="0" cellpadding="0" border="0">
+  <tbody><tr>
+    <td style="background-repeat:no-repeat; background-position:center" class="ui-corner-right" valign="bottom" height="431" background="galeria/big_clubsandwichnuevomenu.jpg" align="center">
+	<div style=""><span style="background-color:#ff9904; padding:3px 5px 2px 5px; color:#FFFFFF" class="ui-corner-top regularBoldText">*CLUB SANDWICH</span></div>
+    
+    </td>
+  </tr>
+</tbody></table>
+           </div></td>
+         </tr>
+       </tbody></table>
+     </div>
+    
+    
+     <table width="100%" cellspacing="0" cellpadding="0" border="0">
+       <tbody><tr>
+         <td width="46%">
+         <div id="controlDIv" style=""></div><div id="control1" align="center"><span id="firstBtn"><a href="javascript:void(0);"><img src="galeria/first_slider.png" alt="First"></a></span><span id="prevBtn"><a href="javascript:void(0);"><img src="galeria/prev_slider.png" alt="Previous"></a></span><span id="nextBtn"><a href="javascript:void(0);"><img src="galeria/next_slider.png" alt="Next"></a></span><span id="lastBtn"><a href="javascript:void(0);"><img src="galeria/last_slider.png" alt="Last"></a></span></div>
+         </td>
+         <td width="54%">&nbsp;</td>
+       </tr>
+     </tbody></table>
+     </div>
+     
+     
+     
+     
+     
+     </div>
+    </div>
+	<div style="background-color:#008000; border-top:1px solid #FFFFFF"><div style="background:url(images/baner_p_1.png); background-repeat:repeat-x">
+<div style="" align="center">
+        <table width="80%" align="center">
+        <tbody><tr>
+                <td width="20%">
+		<a href="http://www.elchilehabanerorestaurante.com/index.php">
+        <div style="padding:5px"><div class="TextLink" align="center">Inicio</div>
+        </div></a>
+        </td>
+		        <td width="20%">
+		<a href="http://www.elchilehabanerorestaurante.com/restaurante_menu.php">
+        <div style="padding:5px"><div class="TextLink" align="center">Nuestro Menu</div>
+        </div></a>
+        </td>
+		        <td width="20%">
+		<a href="http://www.elchilehabanerorestaurante.com/promociones.php">
+        <div style="padding:5px"><div class="TextLink" align="center">Promociones Especiales</div>
+        </div></a>
+        </td>
+		        <td width="20%">
+		<a href="http://www.elchilehabanerorestaurante.com/galeria.php">
+        <div style="padding:5px"><div class="TextLink" align="center">Galeria</div>
+        </div></a>
+        </td>
+		        <td width="20%">
+		<a href="http://www.elchilehabanerorestaurante.com/ultimominuto.php">
+        <div style="padding:5px"><div class="TextLink" align="center">Ultimo Minuto</div>
+        </div></a>
+        </td>
+		        <td width="20%">
+		<a href="http://www.elchilehabanerorestaurante.com/testimonios.php">
+        <div style="padding:5px"><div class="TextLink" align="center">Testimonios</div>
+        </div></a>
+        </td>
+		        <td width="20%">
+		<a href="http://www.elchilehabanerorestaurante.com/contactenos.php">
+        <div style="padding:5px"><div class="TextLink" align="center">Cont�ctenos</div>
+        </div></a>
+        </td>
+		        </tr></tbody></table>
+  </div>
+  <div style="color:#FFFFFF; font-weight:normal" class="TextLink" align="center">
+  � 2010 elchilehabanerorestaurante<br>
+  El Chilehabanero Restaurante: Restaurante, Caf� y Bar.<br>
+  El Chilehabanero Restaurante: Ensaladas, Sandwiches y Pizzas<br>
+  El Chilehabanero Restaurante: Autentica comida Mexicana<br>
+
+El Chilehabanero Restaurante: Autentica comida Yucateca y Mediterranea con el toque gourmet de nuestro Chef<br>
+
+El Chilehabanero Restaurante: Localizado en el centro Historico de Merida, Yucatan Mexico.
+
+ </div>
+
+</div></div></div>
+</td>
+    <td class="columna_right" width="30%"></td>
+  </tr>
+</tbody></table>
+
+</body></html>

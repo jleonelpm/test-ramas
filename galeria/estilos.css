@@ -1,0 +1,227 @@
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #FFFFFF;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+
+.divancho{
+	width:1260px;	
+}.bagdiv{
+	background-color:#e87508;	
+}.bagdivcolor{
+	background:url(images/00im08bag3.png);
+	background-repeat:repeat-x;
+	padding:15px 10px 10px 10px;
+	background-color:#f7e9d4;
+	/*background-color:#f7c982;*/
+}
+.regularBoldText {
+	font-weight: bold;
+	font-size: 11px;
+	color: #333333;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	z-index:inherit;
+}
+.regularText3 {
+	font-size: 13px;
+	color: #333333;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	z-index:inherit;
+}
+.Text{
+	font-weight: normal;
+	font-size: 11px;
+	color: #19314B;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+.TextOferta{
+	font-size: 15px;
+	_font-size: 17px;
+	_font-weight:500;
+	color: #000;
+	font-family: Tahoma, Arial, sans-serif;
+}.TextPrecio{
+	font-size: 17px;
+	_font-size: 18px;
+	font-weight: 100;
+	color: #333333;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+.menuOfert{
+	font-size: 27px;
+	_font-size: 28px;
+	font-weight: 100;
+	color: #ab0001;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+.menuDescription{
+	font-size: 17px;
+	_font-size: 18px;
+	font-weight: 100;
+	color: #584026;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+.menuPrecio{
+	font-size: 23px;
+	_font-size: 24px;
+	font-weight: 100;
+	color: #584026;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+.menuIMGr{
+	/*position:absolute;*/
+	position:absolute;
+	z-index:1;
+}
+
+.TextUpgrade{
+	font-weight: normal;
+	font-size: 14px;
+	color: #000;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+.TextIngredientes{
+	font-weight: normal;
+	font-size: 14px;
+	font-style:italic;
+	color: #333;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+.textHelv{
+	font-family: Helvetica;	
+}
+.error {
+	font-weight: normal;
+	font-size: 9px;
+	color: red;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+
+DIV.borderAbajo {
+	BORDER-BOTTOM: silver 1px solid
+}
+.borderAbajoX {
+	BORDER-BOTTOM: silver 1px solid
+}
+DIV.borderArriba {
+	BORDER-TOP: silver 1px solid
+}
+DIV.borderArribayAbajo {
+	BORDER-TOP: silver 1px solid; BORDER-BOTTOM: silver 1px solid
+}
+DIV.borderArribaDiscontinuo {
+	BORDER-TOP: silver 1px dotted
+}
+DIV.borderAbajoDiscontinuo {
+	BORDER-BOTTOM: silver 1px dotted
+}
+DIV.borderIZQDiscontinuo {
+	border-left: silver 1px dotted
+}DIV.borderDERECHADiscontinuo {
+	border-right: silver 1px dotted
+}
+.xx{
+background-repeat:no-repeat
+}
+.imagenauto{
+background-repeat:no-repeat;
+background-position:0px -12px; line-height:75px
+}
+
+.noborde {
+border:none
+}
+
+.ui-corner-tl { -moz-border-radius-topleft: 15px; -webkit-border-top-left-radius: 15px; }
+.ui-corner-tr { -moz-border-radius-topright: 15px; -webkit-border-top-right-radius: 15px; }
+.ui-corner-bl { -moz-border-radius-bottomleft: 15px; -webkit-border-bottom-left-radius: 15px; }
+.ui-corner-br { -moz-border-radius-bottomright: 15px; -webkit-border-bottom-right-radius: 15px; }
+.ui-corner-top { -moz-border-radius-topleft: 15px; -webkit-border-top-left-radius: 15px; -moz-border-radius-topright: 15px; -webkit-border-top-right-radius: 15px; }
+.ui-corner-bottom { -moz-border-radius-bottomleft: 15px; -webkit-border-bottom-left-radius: 15px; -moz-border-radius-bottomright: 15px; -webkit-border-bottom-right-radius: 15px; }
+.ui-corner-right {  -moz-border-radius-topright: 15px; -webkit-border-top-right-radius: 15px; -moz-border-radius-bottomright: 15px; -webkit-border-bottom-right-radius: 15px; }
+.ui-corner-left { -moz-border-radius-topleft: 15px; -webkit-border-top-left-radius: 15px; -moz-border-radius-bottomleft: 15px; -webkit-border-bottom-left-radius: 15px; }
+.ui-corner-all { -moz-border-radius: 15px; -webkit-border-radius: 15px; }
+.TextLink {
+	font-weight: normal;
+	font-size: 12px;
+	font-weight:bold;
+	color: #FFFFFF;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+.f_texto1{
+	font-weight: normal;
+	font-size: 15px;
+	color: #333333;
+	font-family: Helvetica;
+}
+.f_text1{
+	margin:3px 3px 3px 0px;
+	border:solid 1px #584026;
+	padding:4px;
+}
+ui.float_l{
+	float:left;
+}
+div.menu_active{
+	float:left;
+	color:#FFFFFF;
+	background:url(images/bag_menu.png);
+}
+div.menu_link{
+	float:left;
+	color:#CC0000;
+	cursor:pointer;
+}
+div.menu_link:hover{
+	color:#FFFFFF;
+	background:url(images/bag_menu.png);
+}
+.table_menu{
+	padding:0px 20px 0px 20px;
+	border-right:1px solid #333333;
+	height:40px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:14px;
+	margin-bottom:5px;
+	color:#FFF;
+}
+.columna_left{
+	background:url(images/columna_izq.png);background-repeat:repeat-y; background-position:right; background-color:#8dbc79
+}
+.columna_right{
+	background:url(images/columna_der.png);background-repeat:repeat-y; background-position:left; background-color:#8dbc79
+}
+div.estado{
+
+}
+div.estado:link{
+	background-color:#E0E0E0;
+}
+div.estado:hover{
+	background-color:#EFEFEF;	
+}
+
+.uiButton,.uiButtonSuppressed:active,.uiButtonSuppressed:focus,.uiButtonSuppressed:hover{background:#eee;border:1px solid #999;border-bottom-color:#888;box-shadow:0 1px 0 rgba(0, 0, 0, .1);-moz-box-shadow:0 1px 0 rgba(0, 0, 0, .1);cursor:pointer;display:-moz-inline-box;display:inline-block;font-size: 11px;font-weight:bold;line-height:normal !important;padding:2px 6px;text-align:center;text-decoration:none;vertical-align:top;white-space:nowrap}
+.uiButton + .uiButton{margin-left:4px}
+.uiButton:hover{text-decoration:none}
+.uiButton:active,.uiButtonDepressed{background:#ddd;border-bottom-color:#999;box-shadow:0 1px 0 rgba(0, 0, 0, .05);-moz-box-shadow:0 1px 0 rgba(0, 0, 0, .05)}
+.uiButton .img{margin-top:2px;vertical-align:top}
+.uiButtonLarge .img{margin-top:4px}
+.uiButton .customimg{margin-top:0}
+.uiButtonText{background:none;border:0;color:#333;cursor:pointer;display:-moz-inline-box;display:inline-block;font-family:'Lucida Grande', Tahoma, Verdana, Arial, sans-serif;font-size: 11px;font-weight:bold;margin:0;outline:none;padding:1px 0 2px;white-space:nowrap}
+.textPromo{background:none;border:0;color:#333;font-family:'Lucida Grande', Tahoma, Verdana, Arial, sans-serif;font-size: 11px;margin:0;outline:none;padding:1px 0px 2px 0px}
